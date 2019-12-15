@@ -1,0 +1,79 @@
+html {
+	font-family: 'Comfortaa', cursive;
+}
+.top {
+	box-shadow:1px 1px 2px black;
+	width:99%;
+	height:100px;
+	position:fixed;
+	display:flex;
+	justify-content:space-between;
+	border-bottom: 2px solid black;
+	border-radius:25px;
+}
+.logo {
+	text-shadow: 2px 2px 4px;
+	margin-left: 20px;
+	padding-top:5px;
+	margin-top:5px;
+	width:120px;
+	height:70px;
+	font-weight:bolder;
+	font-size:65px;
+}
+.nav {
+	margin-right:20px;
+	padding-top: 20px;
+	padding-right: 25px;
+	font-size: 25px;
+	margin-top:7px;
+	height:55px;
+}
+.nav > a {
+	box-shadow:2px 2px 5px black;
+	font-weight:bold;
+	border-radius:10px;
+	padding:10px;
+	border:2px solid black;
+	margin-left:25px;
+	margin-top: 20px;
+	text-decoration: none;
+	color:black;
+}
+.nav > a:hover {
+	color:#1d6166;
+	border-radius:10px;
+	border:2px solid #1d6166;
+}
+.container {
+	overflow:hidden;
+	width:300px;
+	height:100px;
+}
+.box {
+	white-space:nowrap;
+		display: flex;
+	justify-content: flex-start;
+
+}
+.box div {
+	height:20px;
+	width:44px;
+	display:inline-block;
+}
+.l:hover {
+	cursor:default;
+	color:#d60e0e;
+} 
+.o:hover {
+	cursor:default;
+	color:#00c81b;
+}
+.g:hover {
+	cursor:default;
+	color:#2faf99;
+}
+.og:hover {
+	cursor:default;
+	color:#6476bf;
+}
