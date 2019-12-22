@@ -8,8 +8,9 @@ html {
 	position:fixed;
 	display:flex;
 	justify-content:space-between;
-	border-bottom: 2px solid black;
+	border-bottom: 3px solid black;
 	border-radius:25px;
+	animation:change-border 15s infinite;
 }
 .logo {
 	text-shadow: 2px 2px 4px;
@@ -39,6 +40,8 @@ html {
 	margin-top: 20px;
 	text-decoration: none;
 	color:black;
+	animation:change-box-shadow infinite 15s;
+	animation:change-color infinite 15s;
 }
 .nav > a:hover {
 	color:#1d6166;
@@ -61,19 +64,120 @@ html {
 	width:44px;
 	display:inline-block;
 }
+.l {
+	transition:0.2s;
+	animation:change-color 15s infinite;
+}
+.o {
+	transition:0.1s;
+	animation:change-color 15s infinite;
+}
+.g {
+	transition:0.2s;
+	animation:change-color 15s infinite;
+}
+.og {
+	transition:0.1s;
+	animation:change-color 15s infinite;
+}
 .l:hover {
 	cursor:default;
-	color:#d60e0e;
+	color:#ff1c1c;
+	transform:translateY(10px);
+	text-shadow:3px 2px 5px red;
 } 
 .o:hover {
 	cursor:default;
 	color:#00c81b;
+	transform:translateY(-10px);
+	text-shadow:3px 2px 5px green;
 }
 .g:hover {
 	cursor:default;
-	color:#2faf99;
+	color:#12501e;
+	transform:translateY(13px);
+	text-shadow:3px 2px 5px #093912;
 }
 .og:hover {
 	cursor:default;
-	color:#6476bf;
+	color:#2625a9;
+	transform:translateY(-12px);
+	text-shadow:3px 2px 5px blue;
+}
+body {
+  animation: change-background 10s infinite;
+}
+@keyframes change-background {
+	0% {
+		background:#fcfcfc;
+	}
+	50% {
+		background:#f5f7f6;
+	}
+	100% {
+		background:#f2fdf5;
+	}
+}
+@keyframes change-color {
+	0% {
+		color: black;
+	}
+	25% {
+		color: #ff1c1c;
+	}
+	50% {
+		color: #00c81b;
+	}
+	75% {
+		color: #12501e;
+	}
+	100% {
+		color: #2625a9;
+	}
+	75% {
+		color: #12501e;
+	}
+	50% {
+		color: #00c81b;
+	}
+	25% {
+		color: #ff1c1c;
+	}
+	0% {
+		color: black;
+	}
+}
+@keyframes change-border {
+	0% {
+		border-bottom: 3px solid black;
+	}
+	25% {
+		border-bottom: 3px solid #ff1c1c;
+	}
+	50% {
+		border-bottom: 3px solid #00c81b;
+	}
+	75% {
+		border-bottom:3px solid #12501e;
+	}
+	100% {
+		border-bottom:3px solid #2625a9;
+	}
+}
+@keyframes .nav > a{
+	0% {
+		box-shadow:2px 2px 5px black;
+	}
+	25% {
+		box-shadow:2px 2px 5px #ff1c1c;
+	}
+	50% {
+		box-shadow:2px 2px 5px #00c81b;
+	}
+	75% {
+		box-shadow:2px 2px 5px #12501e;
+	}
+	100% {
+		box-shadow:2px 2px 5px #2625a9;
+	}
 }
