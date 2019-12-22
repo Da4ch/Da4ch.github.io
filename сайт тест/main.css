@@ -1,11 +1,12 @@
 html{
-	font-family: 'Comfortaa', cursive;
+	font-family: 'Comfortaa';
 }
 *{
 	box-sizing:border-box;
 	margin:0;
 	padding:0;
 }
+/* Навигация сайта */
 .top{
 	height: 120px;
 	display: flex;
@@ -17,7 +18,7 @@ html{
 .logo{
 	margin-left: 100px;
 	font-weight: bolder;
-	font-size: 35px;
+	font-size: 40px;
 
 }
 .nav{
@@ -37,7 +38,7 @@ html{
 	font-size: 18px;
 	transition: 0.4s;
 }
-
+/* Конец навигации */
 .slide{
 	height: 650px;
 	background-image: url(img/img1.jpg);		
@@ -77,10 +78,10 @@ html{
 .opacity-btn {
 	border:2px solid white;
 background-color:transparent;
-	transition:0.4s;
+	transition:0.7s;
 }
 .green-btn {
-	transition:0.4s;
+	transition:0.7s;
 	margin-left: 25px;
 border:none;	
 background-color:rgb(0, 137, 123);
@@ -96,4 +97,44 @@ background-color:rgb(0, 137, 123);
 .nav > a:hover{
 	color:white;
 	background-color: black
+}
+/* страница 1*/
+.str1 {
+	height:670px;
+}
+.top1 {
+	margin: 40px;
+	margin-top:100px;
+	text-align:center;
+}
+.bot1 {
+	margin-top:130px;
+	display: flex;
+	justify-content:space-around;
+}
+.bot1 > div {
+	text-align:center;
+	width:30%;
+}
+
+
+.top2 {
+	margin-top:100px;
+	text-align:center;
+}
+.str2 {
+background-color:rgb(228, 235, 249);
+}
+.bot2 > div {
+	text-align: center;
+	width: 30%;
+	height: 200px;
+	border:2px solid black;
+	justify-content: space-around;
+}
+.bot2 {
+	margin-top: 40px;
+	justify-content: space-around;
+	display: flex;
+	flex-wrap: wrap;
 }
