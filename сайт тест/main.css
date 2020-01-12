@@ -1,184 +1,165 @@
-
-
-
-
 html{
-	font-family: 'Open Sans', cursive,monospace, serif;
+	font-family: 'Comfortaa';
 }
 *{
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+	box-sizing:border-box;
+	margin:0;
+	padding:0;
 }
-/*Навигация сайта*/
+/* Навигация сайта */
 .top{
-	background-color: white;
-	width: 100%;
 	height: 120px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+
 }
 .logo{
 	margin-left: 100px;
-	font-size: 30px;
-	font-weight: bold;
+	font-weight: bolder;
+	font-size: 40px;
+
 }
 .nav{
-	margin-right: 115px;
+	margin-right:115px;
+	font-size:30px;
 	width: 60%;
 	display: flex;
 	justify-content: flex-end;
+ 
+
 }
 .nav > a{
-	margin-left: 10px;
+	padding:10px;
+	font-weight:bold;
+	margin-left: 13px;
 	color: black;
 	text-decoration: none;
-	font-size: 20px;
-	padding: 8px;
-	border: 1px solid transparent;
+	font-size: 18px;
+	transition: 0.4s;
 }
-.nav > a:hover {
-	transition:0.7s;
-	background-color:black;
+.nav > a:hover{
 	color:white;
+	background-color: black
 }
-/*Конец Навигации*/
-
-
-/*top сайта*/
+/* Конец навигации */
 .slide{
-
 	height: 650px;
-	background-image: url(img/img1.jpg);
+	background-image: url(img/img1.jpg);		
 	background-size: cover;
-	color: white;
+	color:white;
+	text-align:center;
 }
-.fon{
-	margin: 0;
-	padding: 0;
-	background-color: rgba(0,0,0,0.6);
-	width: 100%;
-	height: 100%;
-
-	display: flex;
-	justify-content: center;
+.fon {
+	margin:0;
+	padding:0;
+	background-color:rgba(0,0,0,0.6);
+	width:100%;
+	height:100%;
+	display:flex;
 	align-items: center;
+	text-align:center;
+	justify-content: center;
 }
-.content{
-	/**/
-	text-align: center;
+.content {
+	text-align:center;
 }
-
-.content > h1{
-	/**/
-	font-size: 45px;
+.content > h1 {
+	font-size:55px;
 }
-.content > p{
-	margin-top: 25px;
-	margin-bottom:60px;
-	font-size: 22px; 
+.content > p {
+	font-size:30px;
+	margin-top:30px;
+	margin-bottom:70px;
 }
-
-.content > button{
-	color: white;
-	width: 200px;
-	height: 60px;
-	display: inline-block;
-	text-transform: uppercase;
+.content > button {
+	color:white;
+	width:200px;
+	height:60px;
+	display:inline-block;
+	text-transform:uppercase;
 }
-.opacity-btn{
-	border: 2px solid white;
-	background-color: transparent;
+.opacity-btn {
+	font-size:15px;
+	border:2px solid white;
+background-color:transparent;
+	transition:0.7s;
 }
-.green-btn{
+.green-btn {
+	transition:0.7s;
 	margin-left: 25px;
-	border: none;
-	background-color: rgb(0,137,123);
+border:none;	
+background-color:rgb(0, 137, 123);
 }
-
-.opacity-btn:hover{
-	border: none;
-	background-color: rgb(0,137,123);
+.opacity-btn:hover {
+	border:none;
+	background-color: rgb(0, 137, 123);
 }
-.green-btn:hover{
-	border: 2px solid white;
-	background-color: transparent;
+.green-btn:hover {
+	border:2px solid white;
+	background-color:transparent;
 }
-/*Конец*/
-
-
-/*страница 1*/
-.str1{
-	/**/
-	height: 670px;
+/* страница 1*/
+.str1 {
+	height:670px;
 }
-.top1{
-	margin-top: 100px;
-	text-align: center;
+.top1 {
+	margin: 40px;
+	margin-top:100px;
+	text-align:center;
 }
-.bot1{
-	margin-top: 130px;
+.bot1 {
+	margin-top:130px;
 	display: flex;
-	justify-content: space-around;
+	justify-content:space-around;
 }
-.bot1 > div{
-	text-align: center;
-	width: 30%;
+.bot1 > div {
+	text-align:center;
+	width:30%;
 }
-/*конец страница 1*/
 
 
 
-/*страница 2*/
-.str2{
-	/**/
-	background-color: rgb(228,253,249);
-}
-.top2{
-	margin-top: 100px;
-	text-align: center;
-}
-.bot2{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-}
-.bot2 > div{
-	text-align: center;
-	width: 30%;
-	height: 200px;
 
-}
-/*конец страница 2*/
-.str3 {
+.str2 {
 margin-top:70px;
 display: flex;
 justify-content: space-around;
 }
-.str3 > div{
+.str2 > div{
 	border: 2px solid black;
-	width:300px;
+	width:350px;
 	height:600px;
 	overflow: hidden;
 	transition:0.7s;
 }
 .lili1
 {
-	background-color:skyblue;
+	background-color:#879fc1;
 	width:120%;
 	height:40%;
 	transform:rotate(-5deg);
 	margin-left:-25px;
 	margin-top:-30px;
-
 	padding-left:25px;
 	padding-top: 30px;
 }
-.str3 > div:hover {
+.str2 > div:hover {
 	box-shadow:2px 2px 30px grey;
 }
 .lili1 > p{
 	transform: rotate(5deg);
 	margin: 100px;
-	}
+	margin-right:130px;
+}
+.bt {
+	text-shadow:2px 2px 2px black;
+	width: 100%;
+	font-weight:bolder;
+	font-size:30px;
+}
+.st {
+	font-size:20px;
+	font-weight:bolder;
+}
