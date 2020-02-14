@@ -1,6 +1,9 @@
 html{
-	font-family: 'Nunito';
+	font-family: 'Montserrat';
 	font-weight:thin;
+}
+::selection {
+	background:#fff23d;
 }
 *{
 	box-sizing:border-box;
@@ -9,6 +12,7 @@ html{
 }
 /* Навигация сайта */
 .top{
+	position:relative;
 	height: 90px;
 	display: flex;
 	justify-content: space-between;
@@ -17,7 +21,7 @@ html{
 	top: 0px;
 	background-color:white;
 	width:100%;
-	opacity:0.8;
+	opacity:0.9;
 	z-index: 110;
 	margin-top:0px;
 	margin-bottom:5px;
@@ -49,12 +53,12 @@ html{
 .nav > a:hover{
 	opacity:1;
 	color:white;
-	background-color: black;
+	background-color: #1c262e;
 }
 /* Конец навигации */
 .slide{
-	margin-top:90px;
-	height: 700px;
+	margin-top:0px;
+	height: 800px;
 	background-image: url(img/verha1.jpg);		
 	background-size: cover;
 	color:white;
@@ -75,19 +79,14 @@ html{
 	text-align:center;
 }
 .content > h1 {
-	width:5000px;
+	width:375px;
 	padding:20px;
 	background-color:rgb(59, 59, 59, 0.2);
 	color:#dcdfe6;
-	font-size:55px;
+	font-size:24px;
 }
 .content > h1:hover {
 	cursor:default;
-}
-.content > p {
-	font-size:30px;
-	margin-top:30px;
-	margin-bottom:70px;
 }
 .opacity-btn {
 	padding:15px;
@@ -105,10 +104,10 @@ html{
 	transition:0.3s;
 }
 .opacity-btn:hover {
-	border:1px solid #dcdfe6;
-	color:#dcdfe6;
+	border:1px solid #ededed;
+	color:#ededed;
 	cursor:pointer;
-	background-color: #181818;
+	background-color: rgb(59, 59, 59, 0.5);
 }
 .green-btn:hover {
 	border:2px solid white;
@@ -134,62 +133,52 @@ html{
 }
 
 
-
-
+.strstr {
+	margin-left:300px;
+	position:relative;
+	display:flex;
+	width:70%;
+	height:0%;
+	justify-content: space-between;
+}
 .str2 {
-
-	height: 900px;
-	background-color:#f6f6f7;
+	height: 1400px;
+	background-color:#f7f7f7;
 	margin-top:50px;
-	display: flex;
-	justify-content: space-around;
-	margin-top: 20px;
+	margin-top: 30px;
 }
-.srvsrv {
-	margin-top:110px;
-	display: flex;
-	justify-content:center;
-	align-items:center;
-	height:220px;
-}
+
 .srv1 {
+	padding:30px;
+	text-align:center;
+	margin-top:240px;
 	color:#161617;
-	font-size:57px;
+	font-size:40px;
 }
-.str2 > div{
-	margin-top: 100px;
-	border: 2px solid black;
-	width:350px;
-	height:500px;
+.li1 {
+	z-index:100;
+	margin-left:80px;
+	margin-right:80px;
+	align-items: center;
+	margin-top:800px;
+	width:300px;
+	height:290px;
 	overflow: hidden;
-	transition:0.7s;
+	border-radius:7px;
 	background-color: white;
+	border:1px solid #fcfcfc;
+	box-shadow:0 20px 20px rgba(0,0,0,.04);
+	transition: all .25s cubic-bezier(.02,.01,.47,1);
+    transition-property: all;
+    transition-duration: 0.25s;
+    transition-timing-function: cubic-bezier(0.02, 0.01, 0.47, 1);
+    transition-delay: 0s;
 }
-.lili1
-{
-	background-color:#879fc1;
-	width:120%;
-	height:40%;
-	transform:rotate(-5deg);
-	margin-left:-25px;
-	margin-top:-30px;
-	padding-left:25px;
-	padding-top: 30px;
+.li1:hover {
+	margin-top:790px;
+	box-shadow:0 25px 30px rgba(0,0,0,.075);
 }
-.str2 > div:hover {
-	cursor:pointer;
-	box-shadow:20px 0px 1px #b9ddfb;
-}
-.lili1 > p{
-	transform: rotate(5deg);
-	margin: 85px;
-	margin-right:130px;
-}
-.bt {
-	margin-left:;
-	width: 100%;
-	font-size:30px;
-}
+
 .st {
 	padding-left:20px;
 	padding-top:12px;
@@ -202,29 +191,60 @@ html{
 	margin-left: 230px;
 	transition: 0.7s;
 }
-.cwu {
-	background-size:100%;
+.copyrites {	
+	margin-left: 50px;
+	margin-top: 35px;
+	color:#dcdfe6;
+}
+.conta {
+	margin-right:70px;
+	margin-top:55px;
+	height:0px;
+	width:250px;
+	display:flex;
+	justify-content:space-around;
+}
+
+.cwu2 {
+	border-top:30px solid #b8b8b8;
 	background-repeat: no-repeat;
 	display:flex;
 	justify-content:space-between;
 	width:100%;
-	height: 150px;
-	background-color:#f0f0f0;
+	height:170px;
+	background-color:#181818;
 }
-.copyrites {
-margin-left: 50px;
-margin-top: 85px;
-color:grey;
-}
-.conta {
-	margin-top:85px;
-	height:120px;
-	width:260px;
-	height:;
+.lenpg {
+	border-bottom:4px solid #f2f2f2;
+	background-size:100%;
+	background-repeat: no-repeat;
 	display:flex;
-	justify-content:space-around;
-
+	width:100%;
+	height:900px;
+	background-image: url("img/lendingg.png");
 }
-.conta:hover {
-	cursor:pointer;
+@media screen and (min-width: 480px) {
+	.top {
+		display:block;
+	}
+	*, :after, :before {
+    	box-sizing: border-box;
+	}s
+	.srv1 {
+		padding:30px;
+		text-align: center;
+		margin-top: 150px;
+		font-size: 57px;
+		margin-bottom:0px;
+	}
+	div {
+		display:block;
+	}
+	.content > h1 {
+		font-size:55px;
+		width:100%;
+	}
+	.copyrites {
+		margin-top:55px;
+	}
 }
