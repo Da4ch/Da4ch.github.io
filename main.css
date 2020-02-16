@@ -1,0 +1,250 @@
+html{
+	font-family: 'Montserrat';
+	font-weight:thin;
+}
+::selection {
+	background:#fff23d;
+}
+*{
+	box-sizing:border-box;
+	margin:0;
+	padding:0;
+}
+/* Навигация сайта */
+.top{
+	position:relative;
+	height: 90px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	top: 0px;
+	background-color:white;
+	width:100%;
+	opacity:0.9;
+	z-index: 110;
+	margin-top:0px;
+	margin-bottom:5px;
+}
+.logo{
+	color:#181818;
+	margin-left: 70px;
+	font-size: 30px;
+}
+.logo:hover {
+	cursor:pointer;
+}
+.nav{
+	margin-right:80px;
+	font-size:24px;
+	width: 60%;
+	display: flex;
+	justify-content: flex-end;
+}
+.nav > a{
+	padding:14px;
+	margin-left: 0px;
+	color: black;
+	text-decoration: none;
+	font-size: 18px;
+	transition: 0.2s;
+	opacity: 1;
+}
+.nav > a:hover{
+	opacity:1;
+	color:white;
+	background-color: #1c262e;
+}
+/* Конец навигации */
+.slide{
+	margin-top:0px;
+	height: 800px;
+	background-image: url(img/verha1.jpg);		
+	background-size: cover;
+	color:white;
+	text-align:center;
+}
+.fon {
+	margin:0;
+	padding:0;
+	background-color:rgba(0,0,0,0.4);
+	width:100%;
+	height:100%;
+	display:flex;
+	align-items: center;
+	text-align:center;
+	justify-content: center;
+}
+.content {
+	text-align:center;
+}
+.content > h1 {
+	width:375px;
+	padding:20px;
+	background-color:rgb(59, 59, 59, 0.2);
+	color:#dcdfe6;
+	font-size:24px;
+}
+.content > h1:hover {
+	cursor:default;
+}
+.opacity-btn {
+	padding:15px;
+	font-weight:thin;
+	color:#181818;
+	width:200px;
+	height:60px;
+	display:inline-block;
+	white-space: nowrap;
+	font-weight:100;
+	margin-top:100px;
+	font-size:20px;
+	border:1px solid #181818;
+	background-color:transparent;
+	transition:0.3s;
+}
+.opacity-btn:hover {
+	border:1px solid #ededed;
+	color:#ededed;
+	cursor:pointer;
+	background-color: rgb(59, 59, 59, 0.5);
+}
+.green-btn:hover {
+	border:2px solid white;
+	background-color:transparent;
+}
+/* страница 1*/
+.str1 {
+	height:670px;
+}
+.top1 {
+	margin: 40px;
+	margin-top:100px;
+	text-align:center;
+}
+.bot1 {
+	margin-top:130px;
+	display: flex;
+	justify-content:space-around;
+}
+.bot1 > div {
+	text-align:center;
+	width:30%;
+}
+
+
+.strstr {
+	margin-left:300px;
+	position:relative;
+	display:flex;
+	width:70%;
+	height:0%;
+	justify-content: space-between;
+}
+.str2 {
+	height: 1400px;
+	background-color:#f7f7f7;
+	margin-top:50px;
+	margin-top: 30px;
+}
+
+.srv1 {
+	padding:30px;
+	text-align:center;
+	margin-top:240px;
+	color:#161617;
+	font-size:40px;
+}
+.li1 {
+	z-index:100;
+	margin-left:80px;
+	margin-right:80px;
+	align-items: center;
+	margin-top:800px;
+	width:300px;
+	height:290px;
+	overflow: hidden;
+	border-radius:7px;
+	background-color: white;
+	border:1px solid #fcfcfc;
+	box-shadow:0 20px 20px rgba(0,0,0,.04);
+	transition: all .25s cubic-bezier(.02,.01,.47,1);
+    transition-property: all;
+    transition-duration: 0.25s;
+    transition-timing-function: cubic-bezier(0.02, 0.01, 0.47, 1);
+    transition-delay: 0s;
+}
+.li1:hover {
+	margin-top:790px;
+	box-shadow:0 25px 30px rgba(0,0,0,.075);
+}
+
+.st {
+	padding-left:20px;
+	padding-top:12px;
+	width:300px;
+	height:50px;
+	background-color:#ebf3f9;
+	font-size:20px;
+	border-radius:20px;
+	margin-top: 35px;
+	margin-left: 230px;
+	transition: 0.7s;
+}
+.copyrites {	
+	margin-left: 50px;
+	margin-top: 35px;
+	color:#dcdfe6;
+}
+.conta {
+	margin-right:70px;
+	margin-top:55px;
+	height:0px;
+	width:250px;
+	display:flex;
+	justify-content:space-around;
+}
+
+.cwu2 {
+	border-top:30px solid #b8b8b8;
+	background-repeat: no-repeat;
+	display:flex;
+	justify-content:space-between;
+	width:100%;
+	height:170px;
+	background-color:#181818;
+}
+.lenpg {
+	border-bottom:4px solid #f2f2f2;
+	background-size:100%;
+	background-repeat: no-repeat;
+	display:flex;
+	width:100%;
+	height:900px;
+	background-image: url("img/lendingg.png");
+}
+@media screen and (min-width: 480px) {
+	.top {
+		display:block;
+	}
+	*, :after, :before {
+    	box-sizing: border-box;
+	}s
+	.srv1 {
+		padding:30px;
+		text-align: center;
+		margin-top: 150px;
+		font-size: 57px;
+		margin-bottom:0px;
+	}
+	div {
+		display:block;
+	}
+	.content > h1 {
+		font-size:55px;
+		width:100%;
+	}
+	.copyrites {
+		margin-top:55px;
+	}
+}
