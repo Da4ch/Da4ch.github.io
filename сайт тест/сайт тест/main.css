@@ -160,7 +160,9 @@ background-color:rgb(0, 137, 123);
 }
 .lili1
 {
-	background-color:#879fc1;
+	background-image: url(img/backOne.jpg);
+	background-size: 100%;
+	background-color: #fff;
 	width:120%;
 	height:40%;
 	transform:rotate(-5deg);
