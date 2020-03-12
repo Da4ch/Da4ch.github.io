@@ -1,130 +1,78 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>DafourdPortfolio</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="uimini.min.css">
-	<link rel="stylesheet" type="text/css" href="main.css">
-<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/4f70458747.js" crossorigin="anonymous"></script>
-</head>
-<body>
-		<div class="navbar navbar--fixed">
-  <div class="container">
-    <div class="navbar-content"><a class="header-logo" href="index.html">Web-Studio</a>
-      <div class="button-burger"><span class="line line-1"></span><span class="line line-2"></span><span class="line line-3"></span></div>
-      <div class="navbar-list__wrapper">
-        <ul class="navbar-list">
-          <li class="navbar-item"><a class="navbar-link" href="">Домой</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="#p1">О нас</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="#pp">Услуги</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
+    <head>
+        <title>NeuroKitchen v1</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <center><h3 class="p">Hello, everyone, this is my neuro kitchen, if you want to cook something special - it's perfect to you</h3></center>
+        <center><input type="button" value="Cook something!" class="made" onclick="made()"></center>
+        <style>
+            html {
+                font-family:'Handlee', cursive;
+                font-size:2.5vh;
+            }
+            .made {
+                font-family:'Handlee',cursive;
+                font-size:2vh;
+                margin-top:60px;
+                outline:none;
+                background-color:rgba(206, 71, 250, 0.7);
+                width:16vh;
+                height:5vh;
+                border:none;
+                display:inline-block;
+                color:white;
+                
+            }
+            .made:hover {
+                background-color:rgba(206, 31, 250, 0.7);
+            }
+            .p {
+                font-weight:300;
+            }
+        </style>
+        <script>
+            var q = ["100мл ", "200мл ", "500мл ", "750мл ", "1л ", "1.5л ", "2л ", "5л ", "10л ", "1г ", "2г ", "5г ", "50г ", "100г ", "250г ", "500г ", "750г ", "1кг ", "5кг ", "7кг ", "10кг ","Половник ", "Пуд"];
+var w = ["Апельсин ", "Капусту ", "Морковь ", "Дыню ", "Стол ", "Древесину ", "Мотор ", "Оленя ", "Машину ", "CSS ", "PHP программиста ", "Кокос ", "Пенопласт ", "Кольцо сатурна ", "Орео ", "Сыр ", "Рояль ", "Балкон ", "Кость ", "Слизь ", "Магнитофон ", "Салфетку ", "Брусок ", "Эмо ", "Апельсиновый сок ", "Йод ", "Бекон ", "Лифилсхир ", "Кредитную карточку ", "Яблоко ", "Эфир ", "Ваниль ", "Ерша ", "Барана ", "Говядину ", "Маслину ", ""];
+var e = ["нарезать, ", "нашинковать, ", "обрубить, ", "отрубить, ", "порезать, ", "пошинковать, ", "порубить, ", "замариновать, ", "засолить, ", "помять, ", "раздавить, ", "надавить, ", "выдавить, ", ""];
+var r = ["подбросить ", "подкинуть ", "засунуть ", "подсунуть ", "отложить ", "подложить ", "оформить ", "наложить ", "забросить ", "положить ", "налить ", "поставить ", "выкинуть ", "выбросить ", "обложить ", "выстрелить ","насадить ", "утромбовать ", "пресовать ", "наколдовать ", "преобразовать ", "откинуть ", "накапать ", "вылить ", "бросить ", ""];
+var t = ["под ", "на ", "за ", "у ", "в ", "над ", "к ", "по ", "от ","во ", ""];
+var y = ["сковородку ", "сковороду ", "сковороде ", "кастрюлю ", "чашку ", "чашу ", "тару ", "тарелку ", "пол ", "потолок ", "миску ", "кубок ", "кружку ", "половник ", "плиту ", "гриль ", "матрас ", "стол ", "лоб ", "бак ", "мусорку  ", "окно ", "иллюминатор ", "железный контейнер ", "пластиковый контейнер ", "доску ", "кресло ", "шампур ", "полку ", ""];
+var u = [". ", ", ", ". ", "? ", ". ", "! ", ". ", ". ", ". ", "- ", ". ", ": ", "* ", "= ", ".", "& "];
+var i = ["в течении ", "в продолжении ", "в продолжительности ", "в течении ", "во время ", "в течении ", "за ", "подождать ", "за ", "через ", "после "];
+var o = ["15 секунд ", "10 секунд ", "30 секунд ", "45 секунд ", "60 секунд ", "1 минуты ", "2 минут ", "5 минут ", "10 минут ", "9 минут 99 секунд ", "15 минут ", "25 минут ", "30 минут ", "45 минут ", "40 минут ", "50 минут ", "60 минут ", "1 часа ", "1 час ", "7 минут ", "8 минут ", "2 часов ", "2 часа ", "3 часов ", "5 часов ", "10 часов ", "1 секунды ", "1 секунду ", "половины года ", "половину года ", "1 год ", "2 года ", "5 лет ", "10 лет ", "100 лет ", "3 часа "];
+var p = ["перемешивая ", "подбрасывая ", "помешивая ", "подсаливая ", "подперчивая ", "мешая ", "бросая ", "кидая ", "выбрасывая ", "раздавливая ", "давя ", "выпивая ", "мешая ", "помешивая ", "поджаривая ", "варя ", "помешивая ", "мешая ", "мешая "];
+var a = ["жарить. ", "варить. ", "кусать. ", "обжаривать. ", "тушить. ", "тушить из огнетушителя. ", "мешать. ", "ничего не делать. ", "ждать. ", "ждать. ", "жарить. ", "варить. ", "готовить. ", "ковырять. ", "Да."];
+var s = ["После этого ", "Затем ", "На следующий день ", "После ", "Затем ", "После ", "После ", "Далее ", "Дальше ", "Теперь "];
+var d = ["старательно ", "тщательно ", "усердно ", "задерживая дыхание ", "танцуя ", "прыгая ", "подпрыгивая ", "тщательно ", "сильно ", "тяжело дыша ", "лежа ", "сидя ", "стоя ", "махая руками ", "напевая ", "ругаясь ", "матерясь ", "рассказывая стишки ", "играя на саксофоне ", "играя на пианино ", "поигрывая ", "накрывая на стол ", "звоня в дверь соседу ", "молча ", "с закрытыми глазами ", "смотря одним глазом ", "запугивая ", "ничего не делая ", "делая что-то "];
+var f = ["почистить и ", "обмыть и ", "дать остынуть и ", "охладить и ", "запечь и ", "высушить и ", "накрыть крышкой и ", "перемешать и ", "подуть и ", "ничего не делать и ", "и "];
+var g = ["вывалить на ", "высыпать на ", "выложить на ", "навалить на ", "наложить на ", "насыпать на ", "положить на ", "наложить на "];
+var h = ["миску. ", "тарелку. ", "чашу. ", "чашку. ", "тару. ", "блюдо. ", "блядо. ", "блюдце. ", "сковороду. ", "сковородку. ", "тарелку. ", "стол. ", "пол. "];
+var j = ["Посыпать ", "Насыпать ", "Засыпать ", "Осыпать ", "Да.", "Полить. ", "Залить ", "Налить "];
+var k = ["солью.", "вареньем.", "сметаной.", "перцем.", "байдой.", "осыпать.", "укропом.", "петрушкой.", "соусом.", "кетчупом.", "подливой.", "майонезом.", "томатной пастой.", "ореховой пастой.", "пепелом.", "деревянной стружкой", "зубной пастой.", "волосами."];
 
-	<div class="slide">
-		<div class="fon">	
-				<div class="content">
-				<h1>WEB development project</h1>
-				<a href ="#pp" class="opacity-btn"><p class="asdasd">Наши услуги</p></a>
-				</div>
-		</div>
-	</div>
-
-
-	<div class="str1">
-		<a name="p1" href=""></a>
-		<br>
-		<br>
-		<br>
-		<br>
-		<div class="top1">
-			<div>
-				<h1>About us</h1>
-				<br>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			</div>
-		</div>
-		<div class="bot1">
-			<div>
-				<img src="img/worlwide.png">
-				<h1>About us</h1>
-				<br>
-				<p>Lorem ipsum dolor sit amet, consecterur adipisiging elit, sed do eiusmod tempor
-				incididunt ut laboreet dolore magna aliqua. Utenim adminim veniam,</p>
-			</div>
-			<div>
-				<img src="img/collaboration.png">
-				<h1>Text</h1>
-				<br>
-				<p>Lorem ipsum dolor sit amet, consecterur adipisiging elit, sed do eiusmod tempor
-				incididunt ut laboreet dolore magna aliqua. Utenim adminim veniam,</p>
-			</div>
-			<div>
-				<img src="img/thought.png">
-				<h1>Text</h1>
-				<br>
-				<p>Lorem ipsum dolor sit amet, consecterur adipisiging elit, sed do eiusmod tempor
-				incididunt ut laboreet dolore magna aliqua. Utenim adminim veniam,</p>
-			</div>
-		</div>
-	</div>
-
-<a name="pp" href=""></a>
-
-<div class="srvsrv">
-<h2 class="srv1">Our Serivices</h2>	
-</div>
-<div class="str2">
-	<div class="lenpg">
-	<div class="strstr">
-	<div class="li1">
-			<h1 class="hh">Сайт под ключ</h1>
-			<p>Создание сайта "под ключ" любой сложности</p>
-			<li>
-				<ul><a href="#cs">Продающий лендинг</a></ul>
-				<ul><a href="#cs">Заказать сайт</a></ul>
-			</li>
-	</div>
-	<div class="li1">
-			<h1 class="hh">Продвижение сайта</h1>
-			<li>
-				<ul>Текст</ul>
-				<ul><a href="#cs">SEO Оптимизация</a></ul>
-			</li>
-	</div>
-	<div class="li1">
-			<h1 class="hh">Техническая поддержка</h1>
-			<li>
-				<ul>Текст</ul>
-				<ul><a href="#cs">Текст</a></ul>
-			</li>
-	</div>
-		</div>
-	</div>
-</div>
-		<a name="cs" href=""></a>
-		<footer>
-			<div class="cwu2">
-				<div class= "copyrites">
-					<p>Made by Daniil Grishin, Daniil Savelyev</p>
-				</div>
-				<div class="conta">
-					<a class="fab fa-vk fa-lg" style="color: #dcdfe6;" href="https://vk.com/leafylshere"></a>
-					<a class="fab fa-twitter fa-lg" style="color: #dcdfe6;" href="https://twitter.com/da4ch1"></a>
-					<a class="fab fa-instagram fa-lg" style="color: #dcdfe6;" href="https://www.instagram.com/dafourd"></a>
-					<a class="fab fa-github fa-lg" style="color: #dcdfe6;" href="https://github.com/da4ch"></a>
-				</div>
-			</div>
-		</footer>
-			<script src="uimini.min.js"></script>
-</body>
+function made() {
+var dish = 
+q[Math.floor(Math.random()*q.length)] + w[Math.floor(Math.random()*w.length)] +
+e[Math.floor(Math.random()*e.length)] +
+r[Math.floor(Math.random()*r.length)] +
+t[Math.floor(Math.random()*t.length)] +
+y[Math.floor(Math.random()*y.length)] +
+u[Math.floor(Math.random()*u.length)] +
+i[Math.floor(Math.random()*i.length)] +
+o[Math.floor(Math.random()*o.length)] +
+p[Math.floor(Math.random()*p.length)] +
+a[Math.floor(Math.random()*a.length)] +
+s[Math.floor(Math.random()*s.length)] +
+d[Math.floor(Math.random()*d.length)] +
+f[Math.floor(Math.random()*f.length)] +
+g[Math.floor(Math.random()*g.length)] +
+h[Math.floor(Math.random()*h.length)] +
+j[Math.floor(Math.random()*j.length)] +
+k[Math.floor(Math.random()*k.length)];
+    alert(dish);
+}
+        </script>
+    </body>
 </html>
