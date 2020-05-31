@@ -1,0 +1,408 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        -webkit-tap-highlight-color: transparent;
+        scroll-behavior: smooth;
+        outline: none;
+    }
+    
+    body {
+        height: 3000px;
+    }
+    /*first step*/
+    
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 8vh;
+        top: 0;
+        width: 100%;
+        position: fixed;
+        z-index: 10000;
+        background-color: #000;
+        transition: 0.5s;
+    }
+    
+    nav.sticky {
+        background-color: white;
+    }
+    
+    .logo a {
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 2em;
+        text-decoration: none;
+        font-weight: 700;
+        transition: 0.5s;
+    }
+    
+    nav.sticky .logo a {
+        color: #000;
+        -webkit-text-stroke: 1px #000;
+    }
+    
+    nav.sticky ul li a:after {
+        color: #000;
+        background-color: #000;
+    }
+    
+    .nav-links {
+        display: flex;
+        justify-content: space-around;
+        width: 25%;
+        z-index: 100000;
+    }
+    
+    .nav-links li {
+        display: inline-flex;
+        position: relative;
+        list-style: none;
+    }
+    
+    .nav-links a {
+        position: relative;
+        color: #fff;
+        text-decoration: none;
+        letter-spacing: 2px;
+    }
+    
+    .hvr-underline-from-center::before {
+        height: 100px;
+        background-color: #fff;
+    }
+    
+    nav.sticky .nav-links a {
+        color: #000;
+    }
+    
+    .burger {
+        display: none;
+        cursor: pointer;
+    }
+    
+    .burger div {
+        width: 25px;
+        height: 1px;
+        margin: 8px;
+        background-color: #fff;
+        transition: all 0.3s ease;
+    }
+    
+    nav.sticky .burger div {
+        background-color: #000;
+        height: 2px;
+        margin: 7px;
+    }
+    
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+    
+    .toggle .line-1 {
+        transform: rotate(-135deg) translate(-6px, -8px);
+    }
+    
+    .toggle .line-2 {
+        opacity: 0;
+    }
+    
+    .toggle .line-3 {
+        transform: rotate(135deg) translate(-5px, 6px);
+    }
+    /*second step*/
+    
+    .banner {
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+    }
+    
+    .prebanner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .ripplebtn {
+        overflow: hidden;
+        outline: none;
+        margin-top: -2vh;
+        position: absolute;
+        color: #000;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 1.75vh;
+        padding: 20px;
+        padding-right: 75px;
+        padding-left: 75px;
+        background-color: #fff;
+        border-radius: 100px;
+        box-shadow: 0 0 50px rgba(255, 255, 255, 0.3), 0 0 100px rgba(255, 255, 255, 0.2), 0 0 300px rgba(255, 255, 255, 0.1);
+    }
+    
+    span {
+        position: absolute;
+        background: #fff;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        border-radius: 50%;
+        animation: ripple 1s linear infinite;
+    }
+    
+    @keyframes ripple {
+        0% {
+            width: 0px;
+            height: 0px;
+            opacity: 0.5;
+            background-color: #000;
+        }
+        100% {
+            width: 500px;
+            height: 500px;
+            opacity: 0;
+            background-color: #000;
+        }
+    }
+    /*third step*/
+    
+    .aboutus {
+        margin-top: 0;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .aboutus h2 {
+        margin-top: 6vh;
+        font-weight: 100;
+        font-size: 6.5vh;
+        letter-spacing: 3px;
+        padding-bottom: 2vh;
+    }
+    
+    .aboutus p {
+        text-align: center;
+        font-weight: 200;
+        font-size: 2vh;
+        line-height: 40px;
+    }
+    
+    .aboutus a {
+        height: 130px;
+        position: relative;
+    }
+    
+    .fa-arrow-down {
+        margin-right: 10px;
+    }
+    
+    .fa-arrow-down:hover {
+        transform: translateY(500px);
+    }
+    
+    .hvr-ripple-out:hover .fa-arrow-down {
+        transform: translateY(2px);
+    }
+    
+    .fa-arrow-alt-circle-down {
+        margin-top: 9vh;
+    }
+    /*fourth step*/
+    
+    .ourpersonal {
+        margin-top: -5vh;
+        padding-top: 8vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 90vh;
+    }
+    
+    .ourpersonal img {
+        width: 40vh;
+        transition: 0.4s;
+    }
+    
+    .ourpersonal img:hover {
+        transform: scale(1.2);
+    }
+    
+    .ourcontainer p {
+        line-height: 30px;
+        text-align: center;
+    }
+    
+    .ourcontainer h3 {
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .ourcontainer .contactdafran {
+        margin-top: 2vh;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .contactdafran a {
+        font-size: 3.25vh;
+    }
+    
+    .cotainerx {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .ourpersonal h1 {
+        font-weight: 200;
+        font-size: 5vh;
+        padding-bottom: 5vh;
+    }
+    /*fifth step*/
+    
+    .portfoli {
+        padding-top: 5vh;
+        margin-top: 5vh;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .portfoli h1 {
+        font-weight: 200;
+        font-size: 3.55vh;
+    }
+    
+    @media screen and (max-width:1350px) {
+        .logo a {
+            font-size: 4vh;
+        }
+        .nav-links {
+            width: 65%;
+        }
+        .aboutus {
+            margin-top: 10vh;
+        }
+        .aboutus p {
+            font-size: 2.2vh;
+            line-height: 4.5vh;
+        }
+        .contactdafran a {
+            font-size: 2.3vh;
+        }
+    }
+    
+    @media screen and (max-width:768px) {
+        html {
+            overflow-x: hidden;
+        }
+        body {
+            overflow-x: hidden;
+        }
+        nav {
+            top: 0;
+            position: fixed;
+        }
+        nav .logo a {
+            font-size: 25px;
+        }
+        .nav-links .nav-active {
+            transform: translateX(100%);
+        }
+        .nav-links {
+            position: fixed;
+            right: 0px;
+            height: 92vh;
+            top: 8vh;
+            background-color: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            transform: translateX(100%);
+            transition: transform 0.5s ease-in;
+        }
+        .nav-links li {
+            opacity: 0;
+        }
+        .nav-links a {
+            font-size: 1.5em;
+            font-weight: 800;
+        }
+        nav.sticky .nav-links a {
+            color: #000;
+        }
+        nav.sticky .nav-active {
+            background-color: #fff;
+        }
+        .nav-active {
+            transform: translateX(0%);
+        }
+        .burger {
+            display: block;
+        }
+        .hvr-ripple-out {
+            overflow: hidden;
+            outline: none;
+            position: absolute;
+            color: #000;
+            text-decoration: none;
+            font-size: 1.25vh;
+            padding: 15px;
+            padding-right: 40px;
+            padding-left: 40px;
+            background-color: #fff;
+            border-radius: 100px;
+            box-shadow: 0 0 50px rgba(255, 255, 255, 0.3), 0 0 100px rgba(255, 255, 255, 0.8), 0 0 300px rgba(255, 255, 255, 0.1);
+        }
+        .aboutus {
+            height: 24vh;
+        }
+        .aboutus h2 {
+            margin-top: 20vh;
+            font-size: 4vh;
+        }
+        .aboutus p {
+            line-height: 3vh;
+            font-size: 1.50vh;
+        }
+        .fa-arrow-alt-circle-down {
+            font-size: 5vh;
+        }
+        .ourpersonal {
+            margin-top: 15vh;
+        }
+        .ourpersonal h1 {
+            font-size: 5vh;
+        }
+    }
+    
+    @media screen and (max-width:768px) {
+        .nav-links {
+            width: 50%;
+        }
+        .hvr-ripple-out {
+            margin-top: -1vh;
+        }
+    }
+    
+    @media screen and (max-width:360px) {
+        .aboutus {
+            height: 700px;
+        }
+    }
