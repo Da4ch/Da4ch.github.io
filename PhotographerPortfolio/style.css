@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+    outline: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.load * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+}
+
+body {
+    height: 2000px;
+}
+
+nav {
+    z-index: 1000;
+    background-color: #fff;
+    width: 100%;
+    height: 14vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+}
+
+nav .navlinks ion-icon {
+    color: rgba(0, 0, 0);
+    font-size: 3vh;
+}
+
+.logo {
+    text-decoration: none;
+    color: #000;
+    font-family: 'Dancing Script';
+    font-size: 7vh;
+    cursor: pointer;
+}
+
+ion-icon {
+    font-size: 8vh;
+    --ionicon-stroke-width: 1;
+    font-weight: 100;
+    color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+}
+
+.banner {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100vh;
+}
+
+.banner div {
+    position: absolute;
+    flex-direction: column;
+}
+
+.banner p {
+    margin: 0;
+    margin-top: 10vh;
+    font-size: 15vh;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0px 0px 15vh #000;
+}
+
+.banner div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner div a {
+    padding-top: 15vh;
+}
+
+.aboutme {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.aboutme h1 {
+    font-size: 7vh;
+    padding-bottom: 10vh;
+}
+
+.aboutme p {
+    line-height: 8vh;
+    font-size: 3vh;
+    font-weight: 300;
+}
+
+.aboutme div {
+    margin-top: 15vh;
+    opacity: 0.5;
+}
+
+
+/*.photos {
+    margin-top: 5vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 50px 50px;
+    grid-template-areas: "img img img img" "img img img img" "img img img img";
+    grid-column-end: span 1;
+    grid-row-end: span 1;
+    padding: 3vh;
+}*/
+
+.photos {
+    margin-top: 5vh;
+}
+
+.photos div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.photos img {
+    width: 25%;
+    margin: 5%;
+}
+
+.photos img:nth-child(2) {
+    width: 40%;
+}
+
+.photos img:nth-child(4) {
+    width: 40%;
+}
+
+.photos img:first-child {
+    margin-top: 5%;
+}
+
+.photos div p {
+    margin-top: -4%;
+}
+
+.photos div ion-icon {
+    font-size: 5vh;
+    margin-top: 1vh;
+    opacity: 0.6;
+}
+
+.contact {
+    margin-top: 10vh;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("how/12.jpg");
+    background-size: cover;
+    background-position-y: -30vh;
+    background-repeat: no-repeat;
+}
+
+.contact h1 {
+    text-shadow: 0px 0px 15vh #000;
+    color: #fff;
+    font-size: 5vh;
+    text-align: center;
+}
+
+.conti {
+    padding-top: 5vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.conti a {
+    text-shadow: 0vh 0vh 5vh #000, 0vh 0vh 100vh #000;
+    line-height: 12vh;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 3vh;
+    font-weight: 300;
+}
+
+.conti a:hover {
+    font-weight: 600;
+    text-shadow: none;
+}
+
+.contact ion-icon {
+    position: relative;
+    font-size: 8vh;
+    margin-top: 1vh;
+    opacity: 0.8;
+    color: #fff;
+}
+
+
+/*.contact img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}*/
+
+@media screen and (max-width:768px) {
+    .banner img {
+        width: 280%;
+        overflow: auto;
+        padding-right: -180%;
+    }
+    .banner p {
+        font-size: 7vh;
+        line-height: 15vh;
+        margin: 0;
+    }
+    .aboutme {
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+    .aboutme p {
+        font-size: 2.5vh;
+        text-align: center;
+    }
+    .photos img {
+        width: 80%;
+    }
+    .photos img:nth-child(2) {
+        width: 80%;
+    }
+    .photos img:nth-child(1) {
+        width: 80%;
+    }
+    .contact h1 {
+        font-size: 3vh;
+    }
+    .contact {
+        background-position-y: -8vh;
+        background-size: 272%;
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width:769px) {
+    .photos img {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:1400px) {
+    .photos img {
+        width: 30%;
+    }
+    .contact {
+        background-position: 0vh;
+        background-size: cover;
+        height: 100vh;
+    }
+    .banner p {
+        line-height: 17vh;
+    }
+}
