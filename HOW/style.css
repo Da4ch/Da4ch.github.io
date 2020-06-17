@@ -1,408 +1,606 @@
-    * {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+    outline: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.load * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+}
+
+
+/*first step*/
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    top: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 10000;
+    background-color: rgba(0, 0, 0, 0.514);
+    transition: 0.2s;
+}
+
+nav.sticky {
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: 0.3s;
+}
+
+.logo a {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 2em;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+nav.sticky .logo a {
+    color: #000;
+    -webkit-text-stroke: 1px #000;
+}
+
+nav.sticky ul li a:after {
+    color: #000;
+    background-color: #000;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    z-index: 100000;
+}
+
+.nav-links li {
+    display: inline-flex;
+    position: relative;
+    list-style: none;
+}
+
+.nav-links a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.hvr-underline-from-center::before {
+    height: 100px;
+    background-color: #fff;
+}
+
+nav.sticky .nav-links a {
+    color: #000;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 1px;
+    margin: 8px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+nav.sticky .burger div {
+    background-color: #000;
+    height: 2px;
+    margin: 7px;
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line-1 {
+    transform: rotate(-135deg) translate(-6px, -8px);
+}
+
+.toggle .line-2 {
+    opacity: 0;
+}
+
+.toggle .line-3 {
+    transform: rotate(135deg) translate(-5px, 6px);
+}
+
+
+/*second step*/
+
+.banner {
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.prebanner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prebanner h1 {
+    font-family: 'Dancing Script';
+    font-size: 8vh;
+    font-weight: 900;
+    position: absolute;
+    color: rgb(244, 244, 244);
+    text-shadow: 20px 20px 50px #fff;
+    padding-bottom: 40vh;
+}
+
+.ripplebtn {
+    overflow: hidden;
+    outline: none;
+    margin-top: -2vh;
+    position: absolute;
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.75vh;
+    padding: 20px;
+    padding-right: 75px;
+    padding-left: 75px;
+    background-color: #fff;
+    border-radius: 100px;
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.3), 0 0 100px rgba(255, 255, 255, 0.2), 0 0 300px rgba(255, 255, 255, 0.1);
+}
+
+
+/*span {
+    position: absolute;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: ripple 1s linear infinite;
+}
+
+@keyframes ripple {
+    0% {
+        width: 0px;
+        height: 0px;
+        opacity: 0.5;
+        background-color: #000;
+    }
+    100% {
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+        background-color: #000;
+    }
+}*/
+
+
+/*third step*/
+
+.aboutus {
+    margin-top: 0;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.aboutus h2 {
+    margin-top: 6vh;
+    font-weight: 100;
+    font-size: 6.5vh;
+    letter-spacing: 3px;
+    padding-bottom: 2vh;
+}
+
+.aboutus p {
+    text-align: center;
+    font-weight: 200;
+    font-size: 2vh;
+    line-height: 40px;
+}
+
+.aboutus a {
+    height: 130px;
+    position: relative;
+}
+
+.aboutus ion-icon {
+    margin-top: 5vh;
+}
+
+.fa-arrow-down {
+    margin-right: 10px;
+}
+
+.fa-arrow-down:hover {
+    transform: translateY(500px);
+}
+
+.hvr-ripple-out:hover .fa-arrow-down {
+    transform: translateY(2px);
+}
+
+.fa-arrow-alt-circle-down {
+    margin-top: 9vh;
+}
+
+ion-icon {
+    margin-top: 7vh;
+    margin: 0;
+    font-size: 8vh;
+    --ionicon-stroke-width: 1;
+    font-weight: 100;
+    color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/*fourth step*/
+
+.ourpersonal {
+    margin-top: 8vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+}
+
+.ourpersonal img {
+    width: 40vh;
+    transition: 0.4s;
+}
+
+.ourpersonal img:hover {
+    transform: scale(1.2);
+}
+
+.ourcontainer p {
+    line-height: 30px;
+    text-align: center;
+}
+
+.ourcontainer h3 {
+    text-align: center;
+    padding: 20px;
+}
+
+.ourcontainer .contactdafran {
+    margin-top: 2vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.contactdafran a {
+    font-size: 3.25vh;
+}
+
+.cotainerx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ourpersonal h1 {
+    font-weight: 200;
+    font-size: 5vh;
+    padding-bottom: 5vh;
+}
+
+.ourpersonal ion-icon {
+    margin-top: 5vh;
+}
+
+
+/*fifth step*/
+
+.portfoli {
+    margin-top: 10vh;
+    position: relative;
+    padding-top: 0vh;
+    margin-top: 0vh;
+    padding-bottom: 0;
+    margin-bottom: 10vh;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.portfoli h1 {
+    font-weight: 200;
+    font-size: 3.55vh;
+}
+
+.portfoli .portl {
+    overflow: hidden;
+    flex-direction: column;
+    text-align: center;
+    width: 25%;
+    height: 70vh;
+}
+
+.portfoli ion-icon {
+    visibility: hidden;
+    position: absolute;
+}
+
+.portl img {
+    margin-top: 7vh;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.portl img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.portl p {
+    margin-top: 7vh;
+    line-height: 3.5vh;
+    font-size: 1.75vh;
+    font-weight: 500;
+}
+
+
+/*sixth step*/
+
+.foot {
+    position: relative;
+    height: 10vh;
+    background-color: #181818;
+    bottom: 0;
+    z-index: 900000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: -5px;
+    margin-top: 0;
+}
+
+.foot p {
+    color: rgb(240, 240, 240);
+    font-size: 2vh;
+    margin-left: 1vh;
+    text-align: center;
+}
+
+.saratov {
+    position: relative;
+    margin-top: -45vh;
+    margin-bottom: 30vh;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bud .blimk {
+    position: relative;
+    margin-top: -35vh;
+    margin-bottom: 20vh;
+}
+
+.bud {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conti ion-icon {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 3vh;
+    margin-left: 5vh;
+    text-decoration: none;
+}
+
+@media screen and (max-width:1350px) {
+    .logo a {
+        font-size: 4vh;
+    }
+    .nav-links {
+        width: 65%;
+    }
+    .aboutus {
+        margin-top: 10vh;
+    }
+    .aboutus p {
+        font-size: 2.2vh;
+        line-height: 4.5vh;
+    }
+    .contactdafran a {
+        font-size: 2.3vh;
+    }
+}
+
+@media screen and (max-width:1025px) {
+    .prebanner h1 {
+        visibility: hidden;
+    }
+    .portfoli {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        width: 100%;
+        margin-top: -10vh;
+    }
+    .portfoli .portl {
+        width: 85%;
+        text-align: center;
+        margin-top: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .portl img {
+        padding: 0;
+    }
+    .portl p {
+        margin-top: 4vh;
+        font-size: 2vh;
+    }
+    .portl h1 {
+        font-size: 4.6vh;
+    }
+    .portfoli ion-icon {
+        margin-top: -4vh;
+        position: relative;
+        visibility: visible;
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
-        font-family: 'Poppins', sans-serif;
-        -webkit-tap-highlight-color: transparent;
-        scroll-behavior: smooth;
-        outline: none;
     }
-    
-    body {
-        height: 3000px;
+    .portfoli .portl ion-icon {
+        margin-top: 5vh;
     }
-    /*first step*/
-    
+    .saratov .blimk {
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width:768px) {
+    html {
+        overflow-x: hidden;
+    }
     nav {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        min-height: 8vh;
         top: 0;
-        width: 100%;
         position: fixed;
-        z-index: 10000;
-        background-color: #000;
-        transition: 0.5s;
     }
-    
-    nav.sticky {
-        background-color: white;
+    nav .logo a {
+        font-size: 25px;
     }
-    
-    .logo a {
-        color: #fff;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-size: 2em;
-        text-decoration: none;
-        font-weight: 700;
-        transition: 0.5s;
+    .nav-links .nav-active {
+        transform: translateX(100%);
+        background-color: rgba(255, 255, 255, 0.7);
     }
-    
-    nav.sticky .logo a {
-        color: #000;
-        -webkit-text-stroke: 1px #000;
-    }
-    
-    nav.sticky ul li a:after {
-        color: #000;
-        background-color: #000;
-    }
-    
     .nav-links {
+        position: fixed;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: rgba(0, 0, 0, 0.514);
         display: flex;
-        justify-content: space-around;
-        width: 25%;
-        z-index: 100000;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
     }
-    
+    nav.sticky .nav-links {
+        background-color: rgba(255, 255, 255, 0.7);
+    }
     .nav-links li {
-        display: inline-flex;
-        position: relative;
-        list-style: none;
+        opacity: 0;
     }
-    
     .nav-links a {
-        position: relative;
-        color: #fff;
-        text-decoration: none;
-        letter-spacing: 2px;
+        font-size: 1.5em;
+        font-weight: 800;
     }
-    
-    .hvr-underline-from-center::before {
-        height: 100px;
-        background-color: #fff;
-    }
-    
     nav.sticky .nav-links a {
         color: #000;
     }
-    
+    nav.sticky .nav-active {
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+    .nav-active {
+        transform: translateX(0%);
+    }
     .burger {
-        display: none;
-        cursor: pointer;
+        display: block;
     }
-    
-    .burger div {
-        width: 25px;
-        height: 1px;
-        margin: 8px;
-        background-color: #fff;
-        transition: all 0.3s ease;
-    }
-    
-    nav.sticky .burger div {
-        background-color: #000;
-        height: 2px;
-        margin: 7px;
-    }
-    
-    @keyframes navLinkFade {
-        from {
-            opacity: 0;
-            transform: translateX(50px);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(0px);
-        }
-    }
-    
-    .toggle .line-1 {
-        transform: rotate(-135deg) translate(-6px, -8px);
-    }
-    
-    .toggle .line-2 {
-        opacity: 0;
-    }
-    
-    .toggle .line-3 {
-        transform: rotate(135deg) translate(-5px, 6px);
-    }
-    /*second step*/
-    
     .banner {
-        object-fit: cover;
-        width: 100%;
         height: auto;
     }
-    
-    .prebanner {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .ripplebtn {
+    .hvr-ripple-out {
         overflow: hidden;
         outline: none;
-        margin-top: -2vh;
-        position: absolute;
+        position: fixed;
         color: #000;
-        font-weight: 600;
         text-decoration: none;
-        font-size: 1.75vh;
-        padding: 20px;
-        padding-right: 75px;
-        padding-left: 75px;
+        font-size: 1.25vh;
+        padding: 15px;
+        padding-right: 40px;
+        padding-left: 40px;
         background-color: #fff;
         border-radius: 100px;
-        box-shadow: 0 0 50px rgba(255, 255, 255, 0.3), 0 0 100px rgba(255, 255, 255, 0.2), 0 0 300px rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 50px rgba(255, 255, 255, 0.3), 0 0 100px rgba(255, 255, 255, 0.8), 0 0 300px rgba(255, 255, 255, 0.1);
     }
-    
-    span {
-        position: absolute;
-        background: #fff;
-        transform: translate(-50%, -50%);
-        pointer-events: none;
-        border-radius: 50%;
-        animation: ripple 1s linear infinite;
-    }
-    
-    @keyframes ripple {
-        0% {
-            width: 0px;
-            height: 0px;
-            opacity: 0.5;
-            background-color: #000;
-        }
-        100% {
-            width: 500px;
-            height: 500px;
-            opacity: 0;
-            background-color: #000;
-        }
-    }
-    /*third step*/
-    
     .aboutus {
-        margin-top: 0;
-        flex-direction: column;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
+        height: 50vh;
     }
-    
     .aboutus h2 {
-        margin-top: 6vh;
-        font-weight: 100;
-        font-size: 6.5vh;
-        letter-spacing: 3px;
-        padding-bottom: 2vh;
+        margin-top: 20vh;
+        font-size: 4vh;
     }
-    
     .aboutus p {
-        text-align: center;
-        font-weight: 200;
-        font-size: 2vh;
-        line-height: 40px;
+        line-height: 3vh;
+        font-size: 1.50vh;
     }
-    
-    .aboutus a {
-        height: 130px;
-        position: relative;
-    }
-    
-    .fa-arrow-down {
-        margin-right: 10px;
-    }
-    
-    .fa-arrow-down:hover {
-        transform: translateY(500px);
-    }
-    
-    .hvr-ripple-out:hover .fa-arrow-down {
-        transform: translateY(2px);
-    }
-    
     .fa-arrow-alt-circle-down {
-        margin-top: 9vh;
-    }
-    /*fourth step*/
-    
-    .ourpersonal {
-        margin-top: -5vh;
-        padding-top: 8vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        height: 90vh;
-    }
-    
-    .ourpersonal img {
-        width: 40vh;
-        transition: 0.4s;
-    }
-    
-    .ourpersonal img:hover {
-        transform: scale(1.2);
-    }
-    
-    .ourcontainer p {
-        line-height: 30px;
-        text-align: center;
-    }
-    
-    .ourcontainer h3 {
-        text-align: center;
-        padding: 20px;
-    }
-    
-    .ourcontainer .contactdafran {
-        margin-top: 2vh;
-        display: flex;
-        justify-content: space-around;
-    }
-    
-    .contactdafran a {
-        font-size: 3.25vh;
-    }
-    
-    .cotainerx {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .ourpersonal h1 {
-        font-weight: 200;
         font-size: 5vh;
-        padding-bottom: 5vh;
     }
-    /*fifth step*/
-    
+    .ourpersonal {
+        margin-top: 15vh;
+    }
+    .ourpersonal h1 {
+        font-size: 5vh;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .nav-links {
+        width: 50%;
+    }
+    .hvr-ripple-out {
+        margin-top: -1vh;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .aboutus {
+        height: 60vh;
+    }
     .portfoli {
-        padding-top: 5vh;
-        margin-top: 5vh;
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        justify-content: space-around;
+        margin-top: 0;
     }
-    
-    .portfoli h1 {
-        font-weight: 200;
-        font-size: 3.55vh;
-    }
-    
-    @media screen and (max-width:1350px) {
-        .logo a {
-            font-size: 4vh;
-        }
-        .nav-links {
-            width: 65%;
-        }
-        .aboutus {
-            margin-top: 10vh;
-        }
-        .aboutus p {
-            font-size: 2.2vh;
-            line-height: 4.5vh;
-        }
-        .contactdafran a {
-            font-size: 2.3vh;
-        }
-    }
-    
-    @media screen and (max-width:768px) {
-        html {
-            overflow-x: hidden;
-        }
-        body {
-            overflow-x: hidden;
-        }
-        nav {
-            top: 0;
-            position: fixed;
-        }
-        nav .logo a {
-            font-size: 25px;
-        }
-        .nav-links .nav-active {
-            transform: translateX(100%);
-        }
-        .nav-links {
-            position: fixed;
-            right: 0px;
-            height: 92vh;
-            top: 8vh;
-            background-color: #000;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            transform: translateX(100%);
-            transition: transform 0.5s ease-in;
-        }
-        .nav-links li {
-            opacity: 0;
-        }
-        .nav-links a {
-            font-size: 1.5em;
-            font-weight: 800;
-        }
-        nav.sticky .nav-links a {
-            color: #000;
-        }
-        nav.sticky .nav-active {
-            background-color: #fff;
-        }
-        .nav-active {
-            transform: translateX(0%);
-        }
-        .burger {
-            display: block;
-        }
-        .hvr-ripple-out {
-            overflow: hidden;
-            outline: none;
-            position: absolute;
-            color: #000;
-            text-decoration: none;
-            font-size: 1.25vh;
-            padding: 15px;
-            padding-right: 40px;
-            padding-left: 40px;
-            background-color: #fff;
-            border-radius: 100px;
-            box-shadow: 0 0 50px rgba(255, 255, 255, 0.3), 0 0 100px rgba(255, 255, 255, 0.8), 0 0 300px rgba(255, 255, 255, 0.1);
-        }
-        .aboutus {
-            height: 24vh;
-        }
-        .aboutus h2 {
-            margin-top: 20vh;
-            font-size: 4vh;
-        }
-        .aboutus p {
-            line-height: 3vh;
-            font-size: 1.50vh;
-        }
-        .fa-arrow-alt-circle-down {
-            font-size: 5vh;
-        }
-        .ourpersonal {
-            margin-top: 15vh;
-        }
-        .ourpersonal h1 {
-            font-size: 5vh;
-        }
-    }
-    
-    @media screen and (max-width:768px) {
-        .nav-links {
-            width: 50%;
-        }
-        .hvr-ripple-out {
-            margin-top: -1vh;
-        }
-    }
-    
-    @media screen and (max-width:360px) {
-        .aboutus {
-            height: 700px;
-        }
-    }
+}

@@ -1,16 +1,5 @@
-var isActiveBurger = false;
-
-function test() {
-    console.log(isActiveBurger);
-    isActiveBurger = !isActiveBurger;
-    if (isActiveBurger == true) {
-        $("body").css({ "overflow": "hidden", "position": "fixed" });
-    } else {
-        $("body").css({ "overflow": "auto", "position": "inherit" });
-    }
-}
-$(".abc").click(test);
 //The Nav
+
 const navSlide = () => {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
@@ -32,21 +21,17 @@ const navSlide = () => {
 
 navSlide();
 
+$("img, a").on("dragstart", function(event) { event.preventDefault(); });
+
+
 window.addEventListener("scroll", function() {
     var nav = document.querySelector("nav");
     nav.classList.toggle("sticky", window.scrollY > 0);
 });
 
-/*function offScroll() {
-    document.body.style.overflow = "hidden";
-    this.onmouseout = function() {
-        document.body.style.overflow = "auto";
-    };
-}*/
-
 //second step
 
-const buttons = document.querySelectorAll('.ripplebtn');
+/*const buttons = document.querySelectorAll('.ripplebtn');
 buttons.forEach(btn => {
     btn.addEventListener('click', function(e) {
         let x = e.pageX - e.target.offsetLeft;
@@ -60,4 +45,4 @@ buttons.forEach(btn => {
             ripples.remove()
         }, 1000);
     })
-})
+})*/
