@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+    outline: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-decoration: none;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 100000;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2vh;
+}
+
+nav .link {
+    transition: 0.3s;
+}
+
+nav .link:hover {
+    text-shadow: 0 0 2vh #fff;
+}
+
+nav .logo {
+    font-size: 2.3vh;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("what/1.jpg");
+    flex-direction: column;
+}
+
+.header h1 {
+    color: #fff;
+    font-size: 25vh;
+    line-height: 20.5vh;
+    text-shadow: 0 0 65vh rgba(0, 0, 0, 0.5);
+}
+
+.header .hes {
+    margin-left: 39vh;
+    text-shadow: none;
+}
+
+.headercont {
+    margin-bottom: 20vh
+}
+
+.header img {
+    width: 100%;
+}
+
+.header a {
+    position: absolute;
+    color: white;
+    text-decoration: none;
+    padding: 3vh;
+    padding-left: 4.5vh;
+    padding-right: 4.5vh;
+    border: 0.2vh solid #fff;
+    margin-top: 25vh;
+    transition: 0.3s;
+}
+
+.header a:hover {
+    background-color: #fff;
+    color: black;
+}
+
+.about {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("what/2.jpg");
+}
+
+.about .tede {
+    z-index: 100;
+    position: absolute;
+    padding: 5vh;
+    left: 10vh;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.about p {
+    color: #fff;
+    line-height: 8vh;
+    font-size: 4vh;
+    font-weight: 200;
+}
+
+.about img {
+    top: 0;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.about a {
+    position: absolute;
+    margin-top: 35vh;
+}
+
+ion-icon {
+    margin-right: 7vh;
+    position: absolute;
+    margin: 0;
+    font-size: 10vh;
+    --ionicon-stroke-width: 8;
+    color: rgba(255, 255, 255);
+    border-radius: 50%;
+    padding: 0;
+    outline: none;
+}
+
+.offers {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("what/3.jpg");
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.offers ion-icon {
+    visibility: hidden;
+}
+
+.offers img {
+    width: 100%;
+    height: auto;
+}
+
+.offers .o {
+    color: #fff;
+    padding: 5vh;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 2vh #000;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.offers .o:hover {
+    box-shadow: 0 0 4vh #000;
+}
+
+.offers .o ul {
+    margin-top: 3vh;
+}
+
+.offers .o p {
+    font-size: 3vh;
+    text-align: right;
+    margin-top: 3vh;
+    font-weight: 200;
+}
+
+.offers a {
+    position: absolute;
+    margin-top: 35vh;
+}
+
+footer {
+    height: 10vh;
+    background: #181818;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: left;
+    color: #fff;
+    font-size: 2.2vh;
+    font-weight: 200;
+    bottom: 0;
+}
+
+footer .contact {
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    font-size: 2.2vh;
+    margin-right: 10vh;
+}
+
+.podfot {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer .contact ion-icon {
+    position: relative;
+    font-size: 2.2vh;
+    margin-left: 2vh;
+}
+
+@media screen and (max-width:1440px) {
+    .header {
+        background-position-y: -12vh;
+        background-position-x: -20vh;
+    }
+    .header a {
+        text-align: center;
+        margin-top: 25vh;
+    }
+    .offers {
+        height: 100vh;
+        padding-bottom: 10vh;
+    }
+    footer .contact {
+        width: 20%;
+        font-size: 2.2vh;
+    }
+    .about {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .header {
+        background-position-x: -50vh;
+    }
+    .header h1 {
+        font-size: 24vh;
+    }
+    .header .hes {
+        margin-left: 37.1vh;
+        line-height: 18vh;
+    }
+    .header a {
+        margin-top: 25vh;
+        font-size: 1.5vh;
+    }
+    .offers {
+        height: auto;
+        padding-bottom: 10vh;
+    }
+    .offers .o {
+        margin-top: 8vh;
+    }
+    .offers ion-icon {
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .header h1 {
+        font-size: 20vh;
+        line-height: 14.5vh;
+    }
+    .header .hes {
+        margin-left: 31vh;
+    }
+    .about p {
+        font-size: 3vh;
+    }
+    ion-icon {
+        right: -7vh;
+    }
+    .offers .o {
+        font-size: 1.5vh;
+    }
+    footer {
+        font-size: 1.5vh;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .header h1 {
+        font-size: 15vh;
+        line-height: 18vh;
+    }
+    .header .hes {
+        margin-left: 6vh;
+    }
+    .about p {
+        font-size: 1.75vh;
+    }
+    .about .tede {
+        margin-left: -4.6vh;
+        padding: 3.5vh;
+    }
+    .offers .o {
+        margin-top: 10vh;
+        font-size: 1.5vh;
+    }
+    .offers {
+        height: auto;
+        padding-bottom: 10vh;
+    }
+    footer .contact {
+        width: auto;
+        font-size: 0.5vh;
+        margin-right: 10vh;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .header h1 {
+        font-size: 12vh;
+    }
+    .header .hes {
+        margin-left: 5vh;
+    }
+    .about .tede {
+        padding: 2.5vh;
+        margin-left: -6.8vh;
+    }
+}
