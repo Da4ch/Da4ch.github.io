@@ -34,7 +34,7 @@ nav {
     position: fixed;
     z-index: 10000;
     background-color: rgba(0, 0, 0, 0.514);
-    transition: 0.2s;
+    transition: 0.3s;
 }
 
 nav.sticky {
@@ -150,12 +150,12 @@ nav.sticky .burger div {
 
 .prebanner h1 {
     font-family: 'Dancing Script';
-    font-size: 8vh;
+    font-size: 10vh;
     font-weight: 900;
     position: absolute;
     color: rgb(244, 244, 244);
     text-shadow: 20px 20px 50px #fff;
-    padding-bottom: 40vh;
+    padding-bottom: 30vh;
 }
 
 .ripplebtn {
@@ -210,11 +210,12 @@ nav.sticky .burger div {
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: 100vh;
 }
 
 .aboutus h2 {
     margin-top: 6vh;
-    font-weight: 100;
+    font-weight: 200;
     font-size: 6.5vh;
     letter-spacing: 3px;
     padding-bottom: 2vh;
@@ -222,7 +223,7 @@ nav.sticky .burger div {
 
 .aboutus p {
     text-align: center;
-    font-weight: 200;
+    font-weight: 400;
     font-size: 2vh;
     line-height: 40px;
 }
@@ -271,12 +272,12 @@ a {
 /*fourth step*/
 
 .ourpersonal {
-    margin-top: 8vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
+    position: relative;
 }
 
 .ourpersonal img {
@@ -293,19 +294,22 @@ a {
     text-align: center;
 }
 
-.ourcontainer h3 {
-    text-align: center;
-    padding: 20px;
-}
-
 .ourcontainer .contactdafran {
     margin-top: 2vh;
     display: flex;
     justify-content: space-around;
+    width: 50%;
+    text-align: center;
+    margin-left: 25%;
 }
 
 .contactdafran a {
-    font-size: 3.25vh;
+    font-size: 2.3vh;
+    text-align: center;
+}
+
+.contactdafran a:hover {
+    cursor: pointer;
 }
 
 .cotainerx {
@@ -320,6 +324,11 @@ a {
     padding-bottom: 5vh;
 }
 
+.ourpersonal h3 {
+    margin: 2vh;
+    text-align: center;
+}
+
 .ourpersonal ion-icon {
     margin-top: 5vh;
 }
@@ -328,10 +337,8 @@ a {
 /*fifth step*/
 
 .portfoli {
-    margin-top: 10vh;
     position: relative;
-    padding-top: 0vh;
-    margin-top: 0vh;
+    margin-top: 15vh;
     padding-bottom: 0;
     margin-bottom: 10vh;
     width: 100%;
@@ -346,11 +353,22 @@ a {
 }
 
 .portfoli .portl {
+    position: relative;
     overflow: hidden;
     flex-direction: column;
     text-align: center;
     width: 25%;
     height: 70vh;
+}
+
+.saratov {
+    position: absolute;
+    margin-top: -40vh;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .portfoli ion-icon {
@@ -384,13 +402,10 @@ a {
     height: 10vh;
     background-color: #181818;
     bottom: 0;
-    z-index: 900000;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin-bottom: -5px;
-    margin-top: 0;
 }
 
 .foot p {
@@ -398,17 +413,6 @@ a {
     font-size: 2vh;
     margin-left: 1vh;
     text-align: center;
-}
-
-.saratov {
-    position: relative;
-    margin-top: -45vh;
-    margin-bottom: 30vh;
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .bud .blimk {
@@ -430,9 +434,10 @@ a {
     font-size: 3vh;
     margin-left: 5vh;
     text-decoration: none;
+    margin-top: 1vh;
 }
 
-@media screen and (max-width:1350px) {
+@media screen and (max-width:1450px) {
     .logo a {
         font-size: 4vh;
     }
@@ -444,16 +449,29 @@ a {
     }
     .aboutus p {
         font-size: 2.2vh;
-        line-height: 4.5vh;
+        line-height: 5vh;
     }
     .contactdafran a {
         font-size: 2.3vh;
     }
+    .foot ion-icon {
+        font-size: 2.5vh;
+    }
 }
 
-@media screen and (max-width:1025px) {
+@media screen and (max-width:1024px) {
     .prebanner h1 {
-        visibility: hidden;
+        font-size: 8vh;
+        margin-top: 8vh;
+    }
+    .prebanner a {
+        margin-top: 20vh;
+    }
+    .ourpresonal img {
+        margin-top: -5vh;
+    }
+    .ourpersonal {
+        height: 100vh;
     }
     .portfoli {
         flex-direction: column;
@@ -461,17 +479,20 @@ a {
         align-items: center;
         height: auto;
         width: 100%;
-        margin-top: -10vh;
+        margin: 0;
+    }
+    .portfoli img {
+        width: 60%;
     }
     .portfoli .portl {
         width: 85%;
         text-align: center;
-        margin-top: 10vh;
         display: flex;
         align-items: center;
         justify-content: center;
         height: 100vh;
         margin: 0;
+        position: relative;
     }
     .portl img {
         padding: 0;
@@ -495,6 +516,15 @@ a {
     }
     .saratov .blimk {
         visibility: hidden;
+    }
+    nav {
+        transition: 0.3s;
+    }
+    nav.sticky {
+        transition: 0.3s;
+    }
+    .foot ion-icon {
+        font-size: 2.2vh;
     }
 }
 
@@ -551,36 +581,18 @@ a {
     .banner {
         height: auto;
     }
-    .hvr-ripple-out {
-        overflow: hidden;
-        outline: none;
-        position: fixed;
-        color: #000;
-        text-decoration: none;
-        font-size: 1.25vh;
-        padding: 15px;
-        padding-right: 40px;
-        padding-left: 40px;
-        background-color: #fff;
-        border-radius: 100px;
-        box-shadow: 0 0 50px rgba(255, 255, 255, 0.3), 0 0 100px rgba(255, 255, 255, 0.8), 0 0 300px rgba(255, 255, 255, 0.1);
-    }
     .aboutus {
-        height: 50vh;
+        height: 100vh;
     }
     .aboutus h2 {
-        margin-top: 20vh;
-        font-size: 4vh;
+        font-size: 5vh;
     }
     .aboutus p {
-        line-height: 3vh;
-        font-size: 1.50vh;
+        line-height: 4vh;
+        font-size: 1.9vh;
     }
     .fa-arrow-alt-circle-down {
         font-size: 5vh;
-    }
-    .ourpersonal {
-        margin-top: 15vh;
     }
     .ourpersonal h1 {
         font-size: 5vh;
@@ -596,11 +608,54 @@ a {
     }
 }
 
-@media screen and (max-width:375px) {
+@media screen and (max-width:425px) {
+    .prebanner h1 {
+        font-size: 5vh;
+        margin-top: 15vh;
+    }
+    .prebanner a {
+        visibility: hidden;
+    }
+    .portfoli h1 {
+        font-size: 4vh;
+    }
     .aboutus {
+        margin: 0;
         height: 60vh;
+    }
+    .aboutus p {
+        font-size: 1.4vh;
+    }
+    .ourpersonal h1 {
+        margin-bottom: -2vh;
+    }
+    .portfoli img {
+        width: 100%;
+    }
+    .foot p {
+        font-size: 1.5vh;
+    }
+    .foot ion-icon {
+        font-size: 2vh;
+        margin: 1vh;
+        margin-top: 1.5vh;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .prebanner h1 {
+        font-size: 4vh;
+    }
+    .aboutus h2 {
+        font-size: 4.5vh;
+    }
+    .aboutus p {
+        font-size: 1.25vh;
     }
     .portfoli {
         margin-top: 0;
+    }
+    .foot ion-icon {
+        margin-top: 1.7vh;
     }
 }
