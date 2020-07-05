@@ -223,7 +223,7 @@ nav.sticky .burger div {
 
 .aboutus p {
     text-align: center;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 2vh;
     line-height: 40px;
 }
@@ -625,9 +625,14 @@ a {
     }
     .aboutus p {
         font-size: 1.4vh;
+        line-height: 3vh;
     }
     .ourpersonal h1 {
         margin-bottom: -2vh;
+    }
+    .ourpersonal p {
+        font-size: 1.75vh;
+        line-height: 3.5vh;
     }
     .portfoli img {
         width: 100%;
