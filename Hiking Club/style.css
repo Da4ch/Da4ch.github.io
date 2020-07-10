@@ -104,17 +104,11 @@ nav .logo {
     background-image: url("what/2.jpg");
 }
 
-.about .tede {
-    z-index: 100;
-    position: absolute;
-    padding: 5vh;
-    left: 10vh;
-    background: rgba(0, 0, 0, 0.4);
-}
-
 .about p {
+    line-height: 10vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 5vh;
     color: #fff;
-    line-height: 8vh;
     font-size: 4vh;
     font-weight: 200;
 }
@@ -257,6 +251,9 @@ footer .contact ion-icon {
     }
     .header h1 {
         font-size: 24vh;
+        padding-right: 3vh;
+        padding-left: 3vh;
+        margin: auto;
     }
     .header .hes {
         margin-left: 37.1vh;
@@ -267,11 +264,12 @@ footer .contact ion-icon {
         font-size: 1.5vh;
     }
     .offers {
-        height: auto;
+        height: 100vh;
         padding-bottom: 10vh;
     }
     .offers .o {
-        margin-top: 8vh;
+        margin-top: 12vh;
+        position: relative;
     }
     .offers ion-icon {
         visibility: hidden;
@@ -280,7 +278,7 @@ footer .contact ion-icon {
 
 @media screen and (max-width:768px) {
     .header h1 {
-        font-size: 20vh;
+        font-size: 16vh;
         line-height: 14.5vh;
     }
     .header .hes {
@@ -291,6 +289,11 @@ footer .contact ion-icon {
     }
     ion-icon {
         right: -7vh;
+    }
+    .offers {
+        height: auto;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     .offers .o {
         font-size: 1.5vh;
@@ -310,10 +313,6 @@ footer .contact ion-icon {
     }
     .about p {
         font-size: 1.75vh;
-    }
-    .about .tede {
-        margin-left: -4.6vh;
-        padding: 3.5vh;
     }
     .offers .o {
         margin-top: 10vh;
@@ -336,9 +335,5 @@ footer .contact ion-icon {
     }
     .header .hes {
         margin-left: 5vh;
-    }
-    .about .tede {
-        padding: 2.5vh;
-        margin-left: -6.8vh;
     }
 }
