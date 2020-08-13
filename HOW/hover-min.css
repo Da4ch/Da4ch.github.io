@@ -2212,7 +2212,8 @@
 
 .hvr-ripple-out {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    text-align: center;
     margin-top: 15vh;
     color: #000;
     font-weight: 600;

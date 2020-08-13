@@ -1,163 +1,143 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    -webkit-tap-highlight-color: transparent;
-    scroll-behavior: smooth;
-    outline: none;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.load * {
-    -webkit-transition: none !important;
-    -moz-transition: none !important;
-    -ms-transition: none !important;
-    -o-transition: none !important;
-}
-
-
-/*first step*/
-
-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 8vh;
-    top: 0;
-    width: 100%;
-    position: fixed;
-    z-index: 10000;
-    background-color: rgba(0, 0, 0, 0.514);
-    transition: 0.3s;
-}
-
-nav.sticky {
-    background-color: rgba(255, 255, 255, 0.7);
-    transition: 0.3s;
-}
-
-.logo a {
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 2em;
-    text-decoration: none;
-    font-weight: 700;
-    transition: 0.2s;
-}
-
-nav.sticky .logo a {
-    color: #000;
-    -webkit-text-stroke: 1px #000;
-}
-
-nav.sticky ul li a:after {
-    color: #000;
-    background-color: #000;
-}
-
-.nav-links {
-    display: flex;
-    justify-content: space-around;
-    width: 40%;
-    z-index: 100000;
-}
-
-.nav-links li {
-    display: inline-flex;
-    position: relative;
-    list-style: none;
-}
-
-.nav-links a {
-    position: relative;
-    color: #fff;
-    text-decoration: none;
-    letter-spacing: 2px;
-}
-
-.hvr-underline-from-center::before {
-    height: 100px;
-    background-color: #fff;
-}
-
-nav.sticky .nav-links a {
-    color: #000;
-}
-
-.burger {
-    display: none;
-    cursor: pointer;
-}
-
-.burger div {
-    width: 25px;
-    height: 1px;
-    margin: 8px;
-    background-color: #fff;
-    transition: all 0.3s ease;
-}
-
-nav.sticky .burger div {
-    background-color: #000;
-    height: 2px;
-    margin: 7px;
-}
-
-@keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
-
-.toggle .line-1 {
-    transform: rotate(-135deg) translate(-6px, -8px);
-}
-
-.toggle .line-2 {
-    opacity: 0;
-}
-
-.toggle .line-3 {
-    transform: rotate(135deg) translate(-5px, 6px);
-}
-
-
-/*second step*/
-
-.banner {
-    object-fit: cover;
-    width: 100%;
-    height: 100vh;
-}
-
-.prebanner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.prebanner h1 {
-    font-family: 'Dancing Script';
-    font-size: 10vh;
-    font-weight: 900;
-    position: absolute;
-    color: rgb(244, 244, 244);
-    text-shadow: 20px 20px 50px #fff;
-    padding-bottom: 30vh;
-}
-
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+            scroll-behavior: smooth;
+            outline: none;
+            border: none;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        .load * {
+            -webkit-transition: none !important;
+            -moz-transition: none !important;
+            -ms-transition: none !important;
+            -o-transition: none !important;
+        }
+        /*first step*/
+        
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            min-height: 8vh;
+            top: 0;
+            width: 100%;
+            position: fixed;
+            z-index: 10000;
+            background-color: rgba(0, 0, 0, 0.514);
+            transition: 0.3s;
+        }
+        
+        nav.sticky {
+            background-color: rgba(255, 255, 255, 0.7);
+            transition: 0.3s;
+        }
+        
+        .logo a {
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 2em;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.2s;
+        }
+        
+        nav.sticky .logo a {
+            color: #000;
+            -webkit-text-stroke: 1px #000;
+        }
+        
+        nav.sticky ul li a:after {
+            color: #000;
+            background-color: #000;
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: space-around;
+            width: 40%;
+            z-index: 100000;
+        }
+        
+        .nav-links li {
+            display: inline-flex;
+            position: relative;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            position: relative;
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+        
+        nav.sticky .nav-links a {
+            color: #000;
+        }
+        
+        nav.sticky .hvr-underline-from-center:before {
+            background: #000;
+        }
+        
+        .burger {
+            display: none;
+            cursor: pointer;
+        }
+        
+        @keyframes navLinkFade {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0px);
+            }
+        }
+        /*second step*/
+        
+        .banner {
+            object-fit: cover;
+            width: 100%;
+            height: 100vh;
+        }
+        
+        .prebanner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .prebanner ion-icon {
+            font-size: 2vh;
+            margin-bottom: -0.3vh;
+            margin-right: 1.5vh;
+        }
+        
+        .hvr-ripple-out:hover ion-icon {
+            transform: translateY(2px);
+        }
+        
+        .prebanner h1 {
+            font-family: 'Dancing Script';
+            font-size: 10vh;
+            font-weight: 900;
+            position: absolute;
+            color: rgb(244, 244, 244);
+            text-shadow: 20px 20px 50px #fff;
+            margin-bottom: 30vh;
+        }
+        /*
 .ripplebtn {
     overflow: hidden;
     outline: none;
@@ -176,7 +156,7 @@ nav.sticky .burger div {
 }
 
 
-/*span {
+span {
     position: absolute;
     background: #fff;
     transform: translate(-50%, -50%);
@@ -199,468 +179,542 @@ nav.sticky .burger div {
         background-color: #000;
     }
 }*/
-
-
-/*third step*/
-
-.aboutus {
-    margin-top: 0;
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-}
-
-.aboutus h2 {
-    margin-top: 6vh;
-    font-weight: 200;
-    font-size: 6.5vh;
-    letter-spacing: 3px;
-    padding-bottom: 2vh;
-}
-
-.aboutus p {
-    text-align: center;
-    font-weight: 300;
-    font-size: 2vh;
-    line-height: 40px;
-}
-
-.aboutus a {
-    height: 130px;
-    position: relative;
-}
-
-.aboutus ion-icon {
-    margin-top: 5vh;
-}
-
-.fa-arrow-down {
-    margin-right: 10px;
-}
-
-.fa-arrow-down:hover {
-    transform: translateY(500px);
-}
-
-.hvr-ripple-out:hover .fa-arrow-down {
-    transform: translateY(2px);
-}
-
-.fa-arrow-alt-circle-down {
-    margin-top: 9vh;
-}
-
-ion-icon {
-    margin-top: 7vh;
-    margin: 0;
-    font-size: 8vh;
-    --ionicon-stroke-width: 1;
-    font-weight: 100;
-    color: rgba(0, 0, 0, 0.4);
-    border-radius: 50%;
-    padding: 0;
-}
-
-a {
-    text-decoration: none;
-}
-
-
-/*fourth step*/
-
-.ourpersonal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    position: relative;
-}
-
-.ourpersonal img {
-    width: 40vh;
-    transition: 0.4s;
-}
-
-.ourpersonal img:hover {
-    transform: scale(1.2);
-}
-
-.ourcontainer p {
-    line-height: 30px;
-    text-align: center;
-}
-
-.ourcontainer .contactdafran {
-    margin-top: 2vh;
-    display: flex;
-    justify-content: space-around;
-    width: 50%;
-    text-align: center;
-    margin-left: 25%;
-}
-
-.contactdafran a {
-    font-size: 2.3vh;
-    text-align: center;
-}
-
-.contactdafran a:hover {
-    cursor: pointer;
-}
-
-.cotainerx {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.ourpersonal h1 {
-    font-weight: 200;
-    font-size: 5vh;
-    padding-bottom: 5vh;
-}
-
-.ourpersonal h3 {
-    margin: 2vh;
-    text-align: center;
-}
-
-.ourpersonal ion-icon {
-    margin-top: 5vh;
-}
-
-
-/*fifth step*/
-
-.portfoli {
-    position: relative;
-    margin-top: 15vh;
-    padding-bottom: 0;
-    margin-bottom: 10vh;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: space-around;
-}
-
-.portfoli h1 {
-    font-weight: 200;
-    font-size: 3.55vh;
-}
-
-.portfoli .portl {
-    position: relative;
-    overflow: hidden;
-    flex-direction: column;
-    text-align: center;
-    width: 25%;
-    height: 70vh;
-}
-
-.saratov {
-    position: absolute;
-    margin-top: -40vh;
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.portfoli ion-icon {
-    visibility: hidden;
-    position: absolute;
-}
-
-.portl img {
-    margin-top: 7vh;
-    width: 100%;
-    transition: 0.3s;
-}
-
-.portl img:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
-.portl p {
-    margin-top: 7vh;
-    line-height: 3.5vh;
-    font-size: 1.75vh;
-    font-weight: 500;
-}
-
-
-/*sixth step*/
-
-.foot {
-    position: relative;
-    height: 10vh;
-    background-color: #181818;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.foot p {
-    color: rgb(240, 240, 240);
-    font-size: 2vh;
-    margin-left: 1vh;
-    text-align: center;
-}
-
-.bud .blimk {
-    position: relative;
-    margin-top: -35vh;
-    margin-bottom: 20vh;
-}
-
-.bud {
-    height: auto;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.conti ion-icon {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 3vh;
-    margin-left: 5vh;
-    text-decoration: none;
-    margin-top: 1vh;
-}
-
-@media screen and (max-width:1450px) {
-    .logo a {
-        font-size: 4vh;
-    }
-    .nav-links {
-        width: 65%;
-    }
-    .aboutus {
-        margin-top: 10vh;
-    }
-    .aboutus p {
-        font-size: 2.2vh;
-        line-height: 5vh;
-    }
-    .contactdafran a {
-        font-size: 2.3vh;
-    }
-    .foot ion-icon {
-        font-size: 2.5vh;
-    }
-}
-
-@media screen and (max-width:1024px) {
-    .prebanner h1 {
-        font-size: 8vh;
-        margin-top: 8vh;
-    }
-    .prebanner a {
-        margin-top: 20vh;
-    }
-    .ourpresonal img {
-        margin-top: -5vh;
-    }
-    .ourpersonal {
-        height: 100vh;
-    }
-    .portfoli {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: auto;
-        width: 100%;
-        margin: 0;
-    }
-    .portfoli img {
-        width: 60%;
-    }
-    .portfoli .portl {
-        width: 85%;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        margin: 0;
-        position: relative;
-    }
-    .portl img {
-        padding: 0;
-    }
-    .portl p {
-        margin-top: 4vh;
-        font-size: 2vh;
-    }
-    .portl h1 {
-        font-size: 4.6vh;
-    }
-    .portfoli ion-icon {
-        margin-top: -4vh;
-        position: relative;
-        visibility: visible;
-        margin: 0;
-        padding: 0;
-    }
-    .portfoli .portl ion-icon {
-        margin-top: 5vh;
-    }
-    .saratov .blimk {
-        visibility: hidden;
-    }
-    nav {
-        transition: 0.3s;
-    }
-    nav.sticky {
-        transition: 0.3s;
-    }
-    .foot ion-icon {
-        font-size: 2.2vh;
-    }
-}
-
-@media screen and (max-width:768px) {
-    html {
-        overflow-x: hidden;
-    }
-    nav {
-        top: 0;
-        position: fixed;
-    }
-    nav .logo a {
-        font-size: 25px;
-    }
-    .nav-links .nav-active {
-        transform: translateX(100%);
-        background-color: rgba(255, 255, 255, 0.7);
-    }
-    .nav-links {
-        position: fixed;
-        right: 0px;
-        height: 92vh;
-        top: 8vh;
-        background-color: rgba(0, 0, 0, 0.514);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in;
-    }
-    nav.sticky .nav-links {
-        background-color: rgba(255, 255, 255, 0.7);
-    }
-    .nav-links li {
-        opacity: 0;
-    }
-    .nav-links a {
-        font-size: 1.5em;
-        font-weight: 800;
-    }
-    nav.sticky .nav-links a {
-        color: #000;
-    }
-    nav.sticky .nav-active {
-        background-color: rgba(255, 255, 255, 0.7);
-    }
-    .nav-active {
-        transform: translateX(0%);
-    }
-    .burger {
-        display: block;
-    }
-    .banner {
-        height: auto;
-    }
-    .aboutus {
-        height: 100vh;
-    }
-    .aboutus h2 {
-        font-size: 5vh;
-    }
-    .aboutus p {
-        line-height: 4vh;
-        font-size: 1.9vh;
-    }
-    .fa-arrow-alt-circle-down {
-        font-size: 5vh;
-    }
-    .ourpersonal h1 {
-        font-size: 5vh;
-    }
-}
-
-@media screen and (max-width:768px) {
-    .nav-links {
-        width: 50%;
-    }
-    .hvr-ripple-out {
-        margin-top: -1vh;
-    }
-}
-
-@media screen and (max-width:425px) {
-    .prebanner h1 {
-        font-size: 5vh;
-        margin-top: 15vh;
-    }
-    .prebanner a {
-        visibility: hidden;
-    }
-    .portfoli h1 {
-        font-size: 4vh;
-    }
-    .aboutus {
-        margin: 0;
-        height: 60vh;
-    }
-    .aboutus p {
-        font-size: 1.4vh;
-        line-height: 3vh;
-    }
-    .ourpersonal h1 {
-        margin-bottom: -2vh;
-    }
-    .ourpersonal p {
-        font-size: 1.75vh;
-        line-height: 3.5vh;
-    }
-    .portfoli img {
-        width: 100%;
-    }
-    .foot p {
-        font-size: 1.5vh;
-    }
-    .foot ion-icon {
-        font-size: 2vh;
-        margin: 1vh;
-        margin-top: 1.5vh;
-    }
-}
-
-@media screen and (max-width:375px) {
-    .prebanner h1 {
-        font-size: 4vh;
-    }
-    .aboutus h2 {
-        font-size: 4.5vh;
-    }
-    .aboutus p {
-        font-size: 1.25vh;
-    }
-    .portfoli {
-        margin-top: 0;
-    }
-    .foot ion-icon {
-        margin-top: 1.7vh;
-    }
-}
+        /*third step*/
+        
+        .aboutus {
+            margin-top: 0;
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+        }
+        
+        .aboutus h2 {
+            margin-top: 6vh;
+            font-weight: 200;
+            font-size: 6.5vh;
+            letter-spacing: 3px;
+            padding-bottom: 2vh;
+        }
+        
+        .aboutus p {
+            text-align: center;
+            font-weight: 300;
+            font-size: 1.7vh;
+            line-height: 40px;
+        }
+        
+        .aboutus a {
+            height: 130px;
+            position: relative;
+        }
+        
+        .aboutus ion-icon {
+            margin-top: 5vh;
+        }
+        
+        ion-icon {
+            margin: 0;
+            font-size: 8vh;
+            --ionicon-stroke-width: 5;
+            font-weight: 100;
+            color: rgb(0, 0, 0);
+            border-radius: 50%;
+            padding: 0;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        /*fourth step*/
+        
+        .ourpersonal {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+        
+        .ourpersonal img {
+            width: 40vh;
+            transition: 0.4s;
+        }
+        
+        .ourpersonal img:hover {
+            transform: scale(1.2);
+        }
+        
+        .ourcontainer p {
+            line-height: 3.7vh;
+            font-size: 1.7vh;
+            font-weight: 300;
+            text-align: center;
+        }
+        
+        .ourcontainer .contactdafran {
+            display: flex;
+            justify-content: space-around;
+            width: 50%;
+            text-align: center;
+            align-items: center;
+            margin-left: 25%;
+            padding-bottom: 6vh;
+        }
+        
+        .contactdafran ion-icon {
+            font-size: 2.3vh;
+            text-align: center;
+        }
+        
+        .contactdafran a {
+            padding: 0;
+            height: 1vh;
+        }
+        
+        .cotainerx {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .ourpersonal h2 {
+            font-weight: 200;
+            font-size: 6.5vh;
+            margin-bottom: 5vh;
+        }
+        
+        .ourpersonal h3 {
+            margin: 2vh;
+            text-align: center;
+        }
+        
+        .ourpersonal ion-icon {
+            margin-top: 5vh;
+        }
+        /*fifth step*/
+        
+        .portfoli {
+            position: relative;
+            margin-top: 15vh;
+            padding-bottom: 0;
+            margin-bottom: 10vh;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .portfoli h1 {
+            font-weight: 200;
+            font-size: 3.55vh;
+        }
+        
+        .portfoli .portl {
+            position: relative;
+            overflow: hidden;
+            flex-direction: column;
+            text-align: center;
+            width: 25%;
+            height: 70vh;
+        }
+        
+        .saratov {
+            position: absolute;
+            margin-top: -40vh;
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .portfoli ion-icon {
+            visibility: hidden;
+            position: absolute;
+        }
+        
+        .portl img {
+            margin-top: 7vh;
+            width: 100%;
+            transition: 0.3s;
+        }
+        
+        .portl img:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+        
+        .portl p {
+            margin-top: 7vh;
+            line-height: 4.5vh;
+            font-size: 1.75vh;
+            font-weight: 300;
+        }
+        /*sixth step*/
+        
+        .foot {
+            position: relative;
+            background-color: #181818;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            height: 10vh;
+            left: 0;
+            bottom: 0;
+            transform: translateY(0%);
+        }
+        
+        .foot p {
+            color: rgb(240, 240, 240);
+            font-size: 2vh;
+            margin-left: 1vh;
+            text-align: center;
+        }
+        
+        .bud .blimk {
+            position: relative;
+            margin-top: -35vh;
+            margin-bottom: 20vh;
+        }
+        
+        .bud {
+            height: auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .conti ion-icon {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 3vh;
+            margin-left: 5vh;
+            text-decoration: none;
+            margin-top: 1vh;
+        }
+        /*seventh step*/
+        
+         ::-webkit-scrollbar {
+            width: 1.5vh;
+            background-color: #181818d2;
+        }
+        
+         ::-webkit-scrollbar-button {
+            height: 0;
+        }
+        
+         ::-webkit-scrollbar-thumb {
+            background-color: #181818;
+        }
+        
+         ::-webkit-scrollbar-corner {
+            visibility: hidden;
+        }
+        
+        @media screen and (max-width:1450px) {
+            nav .logo a {
+                font-size: 3vh;
+            }
+            .nav-links {
+                width: 65%;
+            }
+            .aboutus {
+                margin-top: 10vh;
+            }
+            .aboutus p {
+                font-size: 2vh;
+                line-height: 5vh;
+            }
+            .ourcontainer p {
+                font-size: 2vh;
+                line-height: 4vh;
+            }
+            .contactdafran a {
+                font-size: 2.3vh;
+            }
+            .foot ion-icon {
+                font-size: 2.5vh;
+            }
+        }
+        
+        @media screen and (max-width:1024px) {
+            nav .nav-links a {
+                font-size: 1.5vh;
+            }
+            .prebanner h1 {
+                font-size: 8vh;
+                margin-top: 8vh;
+            }
+            .prebanner a {
+                margin-top: 20vh;
+            }
+            .prebanner .hvr-ripple-out {
+                padding: 30px;
+                padding-right: 85px;
+                padding-left: 85px;
+            }
+            .aboutus p {
+                font-size: 2vh;
+            }
+            .ourpresonal img {
+                margin-top: -5vh;
+            }
+            .ourpersonal {
+                height: 100vh;
+            }
+            .portfoli {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: auto;
+                width: 100%;
+                margin: 0;
+            }
+            .portfoli img {
+                width: 80%;
+            }
+            .portfoli .portl {
+                width: 85%;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                margin: 0;
+                position: relative;
+            }
+            .portl img {
+                padding: 0;
+            }
+            .portl p {
+                margin-top: 4vh;
+                font-size: 2vh;
+            }
+            .portl h1 {
+                font-size: 4.6vh;
+            }
+            .portfoli ion-icon {
+                margin-top: -4vh;
+                position: relative;
+                visibility: visible;
+                margin: 0;
+                padding: 0;
+            }
+            .portfoli .portl ion-icon {
+                margin-top: 5vh;
+            }
+            .saratov {
+                margin: 0;
+            }
+            .saratov .blimk {
+                visibility: hidden;
+            }
+            nav {
+                transition: 0.3s;
+            }
+            nav.sticky {
+                transition: 0.3s;
+            }
+            .foot {
+                position: relative;
+                bottom: 0vh;
+                border: none;
+                z-index: 100000000000000;
+                margin-top: 15vh;
+            }
+            .foot ion-icon {
+                font-size: 2.2vh;
+                margin-top: 0.65vh;
+            }
+        }
+        
+        @media screen and (max-width:768px) {
+            html {
+                overflow-x: hidden;
+            }
+            nav {
+                top: 0;
+                position: fixed;
+            }
+            nav .logo a {
+                font-size: 3vh;
+            }
+            .nav-links .nav-active {
+                transform: translateX(100%);
+                background-color: rgba(255, 255, 255, 0.7);
+            }
+            .nav-links {
+                position: fixed;
+                right: 0px;
+                height: 92vh;
+                top: 8vh;
+                background-color: rgba(0, 0, 0, 0.514);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                transform: translateX(100%);
+                transition: transform 0.4s ease-in;
+                font-size: 3vh;
+            }
+            nav.sticky .nav-links {
+                background-color: rgba(255, 255, 255, 0.7);
+            }
+            .nav-links li {
+                opacity: 0;
+            }
+            .nav-links a {
+                font-weight: 800;
+            }
+            .nav-links li a {
+                font-size: 3vh;
+            }
+            nav.sticky .nav-links a {
+                color: #000;
+            }
+            nav.sticky .nav-active {
+                background-color: rgba(255, 255, 255, 0.7);
+            }
+            .nav-active {
+                transform: translateX(0%);
+            }
+            .burger {
+                display: block;
+            }
+            .burger div {
+                width: 25px;
+                height: 1px;
+                margin: 8px;
+                background-color: #fff;
+                transition: all 0.3s ease;
+            }
+            nav.sticky .burger div {
+                background-color: #000;
+                height: 2px;
+                margin: 7px;
+            }
+            .toggle .line-1 {
+                transform: rotate(-135deg) translate(-6px, -8px);
+            }
+            .toggle .line-2 {
+                opacity: 0;
+            }
+            .toggle .line-3 {
+                transform: rotate(135deg) translate(-5px, 6px);
+            }
+            .banner {
+                height: auto;
+            }
+            .prebanner ion-icon {
+                margin-bottom: -0.3vh;
+                font-size: 1.75vh;
+            }
+            .aboutus {
+                height: 60vh;
+            }
+            .aboutus h2 {
+                font-size: 5vh;
+            }
+            .aboutus p {
+                line-height: 5vh;
+                font-size: 1.9vh;
+            }
+            .ourpersonal h2 {
+                font-size: 5vh;
+            }
+            .prebanner h1 {
+                font-size: 6vh;
+                margin-top: 30vh;
+            }
+            .prebanner a {
+                visibility: hidden;
+            }
+        }
+        
+        @media screen and (max-width:768px) {
+            .nav-links {
+                width: 50%;
+            }
+        }
+        
+        @media screen and (max-width:546px) {
+            .prebanner h1 {
+                font-size: 5vh;
+            }
+            .burger div {
+                width: 20px;
+                margin: 6px;
+            }
+            nav.sticky .burger div {
+                margin: 5px;
+            }
+            .toggle .line-1 {
+                transform: rotate(-135deg) translate(-4px, -6px);
+            }
+            .toggle .line-2 {
+                opacity: 0;
+            }
+            .toggle .line-3 {
+                transform: rotate(135deg) translate(-4px, 6px);
+            }
+            .portfoli h1 {
+                font-size: 4vh;
+            }
+            .aboutus {
+                margin: 0;
+                height: 60vh;
+            }
+            .aboutus p {
+                font-size: 1.3vh;
+                line-height: 4vh;
+            }
+            .ourpersonal h1 {
+                margin-bottom: -2vh;
+            }
+            .ourpersonal p {
+                font-size: 1.75vh;
+                line-height: 3.5vh;
+            }
+            .portfoli img {
+                width: 100%;
+            }
+            .foot p {
+                font-size: 1.5vh;
+            }
+            .foot ion-icon {
+                font-size: 2vh;
+                margin: 1vh;
+                margin-top: 1.5vh;
+            }
+        }
+        
+        @media screen and (max-width:375px) {
+            .burger div {
+                width: 18px;
+                margin: 5;
+            }
+            nav.sticky .burger div {
+                margin: 4px;
+            }
+            .prebanner h1 {
+                font-size: 4vh;
+            }
+            .aboutus h2 {
+                font-size: 4.5vh;
+            }
+            .aboutus p {
+                font-size: 1.35vh;
+                line-height: 4vh;
+            }
+            .portfoli {
+                margin-top: 0;
+            }
+            .foot ion-icon {
+                margin-top: 1.7vh;
+            }
+        }
