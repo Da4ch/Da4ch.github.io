@@ -34,6 +34,7 @@
             z-index: 10000;
             background-color: rgba(0, 0, 0, 0.514);
             transition: 0.3s;
+            backdrop-filter: blur(10px);
         }
         
         nav.sticky {
@@ -183,8 +184,8 @@ span {
         
         .aboutus {
             margin-top: 0;
-            flex-direction: column;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             width: 100%;
@@ -197,6 +198,11 @@ span {
             font-size: 6.5vh;
             letter-spacing: 3px;
             padding-bottom: 2vh;
+        }
+        
+        .aboutus img {
+            z-index: -5000;
+            width: 40%;
         }
         
         .aboutus p {
@@ -245,7 +251,7 @@ span {
         }
         
         .ourpersonal img:hover {
-            transform: scale(1.2);
+            transform: scale(1.1);
         }
         
         .ourcontainer p {
@@ -315,11 +321,18 @@ span {
         
         .portfoli .portl {
             position: relative;
-            overflow: hidden;
             flex-direction: column;
             text-align: center;
             width: 25%;
             height: 70vh;
+        }
+        
+        .portfoli .portl:hover {
+            cursor: pointer;
+        }
+        
+        .portl:hover img {
+            transform: scale(1.1);
         }
         
         .saratov {
@@ -343,11 +356,6 @@ span {
             transition: 0.3s;
         }
         
-        .portl img:hover {
-            transform: scale(1.1);
-            cursor: pointer;
-        }
-        
         .portl p {
             margin-top: 7vh;
             line-height: 4.5vh;
@@ -358,7 +366,8 @@ span {
         
         .foot {
             position: relative;
-            background-color: #181818;
+            /*background-color: #181818;*/
+            background: linear-gradient(45deg, #1f1f1f, #050505);
             display: flex;
             align-items: center;
             justify-content: space-around;
@@ -554,6 +563,8 @@ span {
                 height: 92vh;
                 top: 8vh;
                 background-color: rgba(0, 0, 0, 0.514);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -569,7 +580,7 @@ span {
                 opacity: 0;
             }
             .nav-links a {
-                font-weight: 800;
+                font-weight: 300;
             }
             .nav-links li a {
                 font-size: 3vh;
